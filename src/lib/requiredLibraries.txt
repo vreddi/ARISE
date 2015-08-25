@@ -1,0 +1,5 @@
+Required by the core:
+    json-lib (and its dependencies specified on the website of course) @ http://json-lib.sourceforge.net/
+
+Required by the SQLDBConnector:
+    mysql-connector-java @ http://dev.mysql.com/downloads/connector/j/
