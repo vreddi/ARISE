@@ -4,14 +4,12 @@ import controllers.SearchHandler;
 import controllers.schema.SchemaReader;
 import controllers.wrapper.aspectWrapper.GeneralAspectWrapper;
 import controllers.wrapper.sourceWrapper.GeneralSourceWrapper;
-import controllers.wrapper.sourceWrapper.indirectWrappers.LocalSourceWrapper;
-import controllers.wrapper.sourceWrapper.indirectWrappers.RemoteSourceWrapper;
+import controllers.wrapper.sourceWrapper.IndirectSourceWrapper;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
-import java.net.InetAddress;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
@@ -20,18 +18,9 @@ import static controllers.intraAspectMatchers.InclusionCounter.countInclusion;
 public class LocalAspectWrapper extends GeneralAspectWrapper {
 
     private Set<GeneralSourceWrapper> registeredSources;
-    private SearchHandler handler;
-
-    public LocalAspectWrapper() {
-        super();
-        this.schema = null;
-        this.registeredSources = null;
-        this.isValid = false;
-    }
 
     public LocalAspectWrapper(String aspectName, SearchHandler handler) {
         super(aspectName);
-        this.handler = handler;
         String aspectBasePath = basePath + "/" + aspectName;
         SchemaReader sReader = new SchemaReader(aspectBasePath + "/schema.tsv");
         if (!sReader.isValid()) {
@@ -48,7 +37,12 @@ public class LocalAspectWrapper extends GeneralAspectWrapper {
                     if (source.getName().startsWith(".") || !(source.isDirectory())) {
                         continue;
                     }
-                    this.registeredSources.add(new LocalSourceWrapper(schema, source.getName(), this.name, handler));
+                    this.registeredSources.add(new IndirectSourceWrapper(
+                            schema,
+                            source.getName(),
+                            this.name,
+                            handler
+                    ));
                 }
                 File remoteList = new File(aspectBasePath + "/remoteServers.tsv");
                 if (remoteList.exists() && remoteList.isFile()) {
@@ -60,7 +54,11 @@ public class LocalAspectWrapper extends GeneralAspectWrapper {
                             int tabIndex = line.indexOf('\t');
                             String sourceName = line.substring(0, tabIndex);
                             String sourceAddress = line.substring(tabIndex+1);
-                            this.registeredSources.add(new RemoteSourceWrapper(schema, sourceName, sourceAddress));
+                            this.registeredSources.add(new IndirectSourceWrapper(
+                                    schema,
+                                    sourceName,
+                                    this.name,
+                                    handler));
                         }
                     } catch (Exception e) {
                         System.out.println(e.getMessage());

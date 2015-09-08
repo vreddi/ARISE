@@ -60,7 +60,9 @@ public class MainFrame extends JFrame{
         String[] nameTokens = getNameTokens(name);
         searchConditions.put("first", nameTokens[0]);
         searchConditions.put("last", nameTokens[1]);
-        searchConditions.put("middle", nameTokens[2]);
+        if (nameTokens[2].length() != 0) {
+            searchConditions.put("middle", nameTokens[2]);
+        }
         searchConditions.put("fullName", name);
         if(!affiliation.equals("Affiliation, i.e. UIUC")) {
             searchConditions.put("affiliation", affiliation);

@@ -1,8 +1,7 @@
 package controllers;
 
 import java.io.*;
-import java.net.InetAddress;
-import java.net.Socket;
+import java.net.InetSocketAddress;
 import java.util.HashSet;
 import java.util.Set;
 import controllers.wrapper.GeneralWrapper;
@@ -11,29 +10,16 @@ import controllers.wrapper.aspectWrapper.indirectWrappers.LocalAspectWrapper;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
-import static util.Constants.localCommunicationEndingMessage;
-
 public class SearchHandler{
 
     private Set<GeneralAspectWrapper> registeredAspects;
     private boolean isValid;
-    private Thread localServerThread;
-    private InetAddress serverAddress;
-    private int serverPort;
+    private LocalSearchServer server;
 
     public SearchHandler() {
         this.reset();
-        localServerThread = new Thread(new Runnable() {
-            @Override
-            public void run() {
-                LocalSearchServer server = new LocalSearchServer();
-                serverAddress = server.getInetAddress();
-                serverPort = server.getPort();
-                System.out.println("Local service server running at " + serverAddress.toString());
-                server.startAccepting();
-            }
-        });
-        localServerThread.start();
+        server = new LocalSearchServer();
+        server.start();
     }
 
     public void reset() {
@@ -91,6 +77,10 @@ public class SearchHandler{
         return ret;
     }
 
+    public InetSocketAddress getServerSocket() {
+        return server.getSocketAddress();
+    }
+
     public void addAspect(JSONObject description) {
         String name = description.getString("name");
         File f = new File(GeneralWrapper.basePath + "/" + name);
@@ -116,15 +106,6 @@ public class SearchHandler{
                     registeredAspects.add(awrapper);
                 }
                 //  Inform the background service
-                Socket socket = new Socket(serverAddress, serverPort);
-                PrintWriter printWriter = new PrintWriter(new OutputStreamWriter(socket.getOutputStream()));
-                JSONObject toSend = new JSONObject();
-                toSend.put("reset", true);
-                printWriter.println(toSend.toString());
-                printWriter.println(localCommunicationEndingMessage);
-                printWriter.flush();
-                printWriter.close();
-                socket.close();
             } catch (Exception e) {
                 if (schemaFile.exists()) {
                     schemaFile.delete();
@@ -133,13 +114,5 @@ public class SearchHandler{
                 e.printStackTrace();
             }
         }
-    }
-
-    public InetAddress getServerAddress() {
-        return serverAddress;
-    }
-
-    public int getServerPort() {
-        return serverPort;
     }
 }
