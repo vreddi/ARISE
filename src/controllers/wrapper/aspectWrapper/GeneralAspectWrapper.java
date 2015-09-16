@@ -49,4 +49,8 @@ public abstract class GeneralAspectWrapper implements GeneralWrapper{
 
     public abstract JSONArray timedGetResultAsJSONArray(JSONObject searchConditions);
 
+    public abstract boolean isActivated();
+
+    public abstract void setActivation(String source, boolean newIsActive);
+
 }

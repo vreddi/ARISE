@@ -3,7 +3,9 @@ package controllers;
 import java.io.*;
 import java.net.InetSocketAddress;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
+import java.util.HashMap;
 import controllers.wrapper.GeneralWrapper;
 import controllers.wrapper.aspectWrapper.GeneralAspectWrapper;
 import controllers.wrapper.aspectWrapper.indirectWrappers.LocalAspectWrapper;
@@ -16,6 +18,7 @@ import static util.Constants.localServerPortNumber;
 public class SearchHandler{
 
     private Set<GeneralAspectWrapper> registeredAspects;
+    private Map<String, Boolean> activation;
     private boolean isValid;
     private LocalSearchServer server;
 
@@ -28,21 +31,23 @@ public class SearchHandler{
     public void reset() {
         File aspDir = new File(GeneralWrapper.basePath);
         this.registeredAspects = new HashSet<GeneralAspectWrapper>();
-                if (aspDir.exists() && aspDir.isDirectory()) {
-                    File[] aspects = aspDir.listFiles();
-                    try {
-                        for (File aspect : aspects) {
-                            if (aspect.getName().startsWith(".") || !(aspect.isDirectory())) {
-                                continue;
-                            }
-                            GeneralAspectWrapper aWrapper = new LocalAspectWrapper(aspect.getName(), this);
-                            if (aWrapper.isValid()) {
-                                this.registeredAspects.add(aWrapper);
-                            }
-                        }
-                        this.isValid = true;
-                    } catch (Exception e) {
-                        System.out.println(e.getMessage());
+        this.activation = new HashMap<String, Boolean>();
+        if (aspDir.exists() && aspDir.isDirectory()) {
+            File[] aspects = aspDir.listFiles();
+            try {
+                for (File aspect : aspects) {
+                    if (aspect.getName().startsWith(".") || !(aspect.isDirectory())) {
+                        continue;
+                    }
+                    GeneralAspectWrapper aWrapper = new LocalAspectWrapper(aspect.getName(), this);
+                    if (aWrapper.isValid()) {
+                        this.registeredAspects.add(aWrapper);
+                        this.activation.put(aspect.getName(), new Boolean(true));
+                    }
+                }
+                this.isValid = true;
+            } catch (Exception e) {
+                System.out.println(e.getMessage());
                 e.printStackTrace();
                 this.isValid = false;
             }
@@ -54,12 +59,22 @@ public class SearchHandler{
     public JSONObject search(JSONObject searchConditions) {
         JSONObject results = new JSONObject();
         for (GeneralAspectWrapper registeredAspect : this.registeredAspects) {
-            JSONObject temp = new JSONObject();
-            temp.put("schema", registeredAspect.getSchema().toJSONArray());
-            temp.put("results", registeredAspect.timedGetResultAsJSONArray(searchConditions));
-            results.put(registeredAspect.name, temp);
+            if (registeredAspect.isActivated()) {
+                JSONObject temp = new JSONObject();
+                temp.put("schema", registeredAspect.getSchema().toJSONArray());
+                temp.put("results", registeredAspect.timedGetResultAsJSONArray(searchConditions));
+                results.put(registeredAspect.name, temp);
+            }
         }
         return results;
+    }
+
+    public void setActivation(String aspect, String source, boolean newIsActive) {
+        for (GeneralAspectWrapper registeredAspect : registeredAspects) {
+            if (registeredAspect.name.equals(aspect)) {
+                registeredAspect.setActivation(source, newIsActive);
+            }
+        }
     }
 
     public boolean isValid() {

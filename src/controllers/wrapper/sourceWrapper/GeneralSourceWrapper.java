@@ -13,6 +13,7 @@ import net.sf.json.JSONObject;
 public abstract class GeneralSourceWrapper implements GeneralWrapper{
 
     public String name;
+    public boolean isActive;
     protected boolean isValid;
     protected SchemaObj schema;
 
@@ -20,12 +21,14 @@ public abstract class GeneralSourceWrapper implements GeneralWrapper{
         this.name = null;
         this.schema = null;
         this.isValid = false;
+        this.isActive = false;
     }
 
     public GeneralSourceWrapper(SchemaObj schema, String name) {
         this.name = name;
         this.schema = schema;
         this.isValid = true;    //  May be replaced by integrity check later.
+        this.isActive = true;
     }
 
     public boolean isValid() {

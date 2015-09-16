@@ -111,19 +111,20 @@ public class MainFrame extends JFrame{
                     @Override
                     public void actionPerformed(ActionEvent e) {
                         String settings = readFileContent(GeneralWrapper.basePath + "/" + aspect + "/" + source + "/settings.json");
-                        JOptionPane.showMessageDialog(
-                                null,
-                                settings,
-                                "Settings of " + source,
-                                JOptionPane.PLAIN_MESSAGE
+                        int dialogResult = JOptionPane.showConfirmDialog(
+                            null,
+                            settings + "\nDo you want to activate or continue the activation of this source?",
+                            "Settings of " + source,
+                            JOptionPane.YES_NO_OPTION
                         );
+                        searchHandler.setActivation(aspect, source, dialogResult == JOptionPane.YES_OPTION);
                     }
                 });
                 aspectItem.add(sourceItem);
             }
         }
         final MainFrame currentFrame = this;
-        JMenuItem addAspectItem = new JMenuItem("Add more");
+        JMenuItem addAspectItem = new JMenuItem("Add more...");
         addAspectItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {

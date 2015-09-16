@@ -15,15 +15,18 @@ import java.util.Map;
 public class RemoteAspectWrapper extends GeneralAspectWrapper {
 
     private String url;
+    public boolean isActive;
 
     public RemoteAspectWrapper() {
         super();
         url = null;
+        isActive = false;
     }
 
     public RemoteAspectWrapper(String name, String url) {
         super(name);
         this.url = url;
+        this.isActive = true;
         if (url != null) {
             try {
                 URL urlObject = new URL(url + "/schema");
@@ -65,6 +68,16 @@ public class RemoteAspectWrapper extends GeneralAspectWrapper {
         long endTime = System.currentTimeMillis();
         System.out.println("Aspect " + name + " finished execution. Time elapsed: " + ((double)(endTime - startTime)/1000.0) + " seconds.");
         return ret;
+    }
+
+    @Override
+    public boolean isActivated() {
+        return this.isActive;
+    }
+
+    @Override
+    public void setActivation(String source, boolean newIsActive) {
+        this.isActive = newIsActive;
     }
 
     @Override

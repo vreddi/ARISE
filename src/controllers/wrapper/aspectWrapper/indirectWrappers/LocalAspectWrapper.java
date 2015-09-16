@@ -73,6 +73,16 @@ public class LocalAspectWrapper extends GeneralAspectWrapper {
         }
     }
 
+    public void setActivation(String source, boolean newIsActive) {
+        for (GeneralSourceWrapper registeredSource : registeredSources) {
+            if (registeredSource.name.equals(source)) {
+                System.out.println(registeredSource.name);
+                System.out.println(newIsActive);
+                registeredSource.isActive = newIsActive;
+            }
+        }
+    }
+
     @Override
     public JSONArray getRegisteredSources() {
         Set<String> ret = new HashSet<String>();
@@ -86,21 +96,35 @@ public class LocalAspectWrapper extends GeneralAspectWrapper {
     public JSONArray getResultAsJSONArray(JSONObject searchConditions) {
         JSONObject resultFromEachSource = new JSONObject();
         for (GeneralSourceWrapper registeredSource : this.registeredSources) {
-            JSONArray result = registeredSource.getResultAsJSONArray(searchConditions);
-            if (result != null) {
-                resultFromEachSource.put(registeredSource.name, result);
+            if (registeredSource.isActive) {
+                JSONArray result = registeredSource.getResultAsJSONArray(searchConditions);
+                if (result != null) {
+                    resultFromEachSource.put(registeredSource.name, result);
+                }
             }
         }
         return countInclusion(this.schema, resultFromEachSource);
     }
 
     @Override
+    public boolean isActivated() {
+        for (GeneralSourceWrapper registeredSource : registeredSources) {
+            if (registeredSource.isActive) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    @Override
     public JSONArray timedGetResultAsJSONArray(JSONObject searchConditions) {
         JSONObject resultFromEachSource = new JSONObject();
         for (GeneralSourceWrapper registeredSource : this.registeredSources) {
-            JSONArray result = registeredSource.timedGetResultAsJSONArray(searchConditions);
-            if (result != null) {
-                resultFromEachSource.put(registeredSource.name, result);
+            if (registeredSource.isActive) {
+                JSONArray result = registeredSource.timedGetResultAsJSONArray(searchConditions);
+                if (result != null) {
+                    resultFromEachSource.put(registeredSource.name, result);
+                }
             }
         }
         return countInclusion(this.schema, resultFromEachSource);
