@@ -1,4 +1,4 @@
-package gui.shared;
+package gui.components;
 
 import controllers.schema.Field;
 import controllers.schema.SchemaObj;

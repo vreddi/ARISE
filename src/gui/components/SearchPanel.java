@@ -1,6 +1,6 @@
-package gui.shared;
+package gui.components;
 
-import gui.local.MainFrame;
+import gui.MainFrame;
 
 import javax.swing.*;
 import java.awt.*;

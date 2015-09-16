@@ -44,10 +44,15 @@ public class HTTPHandler implements HttpHandler {
         String method = httpExchange.getRequestMethod();
         if (method.equals("GET")) {
             handleGET(httpExchange);
-        } else {
-            //  All other to be added here. (more clauses)
+        } else if (method.equals("POST")) {
+            String path = httpExchange.getRequestURI().getPath();
+            if (path.equals("/reset")) {
+                //  For post to /reset, reset registration regardless of anything.
+                //  The body is not read.
+                resetRegisteredSources();
+                sendResponse(httpExchange, 200, "Successfully reset registration.");
+            }
         }
-
     }
 
     /*

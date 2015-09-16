@@ -1,6 +1,6 @@
-package gui.shared.adders;
+package gui.components.adders;
 
-import gui.local.MainFrame;
+import gui.MainFrame;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -65,7 +65,7 @@ public class AspectAdder extends JFrame {
         this.fields = new ArrayList<AspectLine>();
         this.setLayout(new FlowLayout(FlowLayout.CENTER, 0, 0));
         name = new JTextField("Input aspect name here.");
-        name.setSize(nameWidth + pkWidth + syntaxWidth + 10, lineHeight + 5);
+        name.setSize(nameWidth + pkWidth + syntaxWidth, lineHeight + 5);
         name.setPreferredSize(new Dimension(nameWidth + pkWidth + syntaxWidth + 10, lineHeight + 5));
         this.getContentPane().add(name);
         JLabel nameLabel = new JLabel("Name", SwingConstants.CENTER);

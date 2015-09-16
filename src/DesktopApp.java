@@ -1,4 +1,4 @@
-import gui.local.MainFrame;
+import gui.MainFrame;
 
 public class DesktopApp {
 

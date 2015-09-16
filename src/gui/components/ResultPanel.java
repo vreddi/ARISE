@@ -1,4 +1,4 @@
-package gui.shared;
+package gui.components;
 
 import net.sf.json.JSONObject;
 import javax.swing.*;

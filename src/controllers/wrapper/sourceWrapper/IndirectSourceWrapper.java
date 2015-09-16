@@ -4,7 +4,7 @@ import controllers.SearchHandler;
 import controllers.schema.SchemaObj;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import util.WebGetter;
+import util.MyHTTP;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -40,7 +40,7 @@ public class IndirectSourceWrapper extends GeneralSourceWrapper {
             System.out.println("Failed to encode aspect or source name for source: " + this.name);
             return null;
         }
-        String response = WebGetter.getResponseString(url, params);
+        String response = MyHTTP.get(url, params);
         if (response == null) {
             return null;
         } else {

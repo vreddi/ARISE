@@ -4,7 +4,7 @@ import controllers.schema.SchemaReader;
 import controllers.wrapper.aspectWrapper.GeneralAspectWrapper;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import util.WebGetter;
+import util.MyHTTP;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -49,7 +49,7 @@ public class RemoteAspectWrapper extends GeneralAspectWrapper {
             String key = (String)k;
             params.put(key, searchConditions.getString(key));
         }
-        return JSONArray.fromObject(WebGetter.getResponseString(url, params));
+        return JSONArray.fromObject(MyHTTP.get(url, params));
     }
 
     @Override

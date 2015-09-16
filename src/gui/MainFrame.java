@@ -1,10 +1,10 @@
-package gui.local;
+package gui;
 
 import controllers.SearchHandler;
 import controllers.wrapper.GeneralWrapper;
-import gui.shared.ResultPanel;
-import gui.shared.SearchPanel;
-import gui.shared.adders.AspectAdder;
+import gui.components.ResultPanel;
+import gui.components.SearchPanel;
+import gui.components.adders.AspectAdder;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -23,6 +23,17 @@ public class MainFrame extends JFrame{
     private SearchHandler searchHandler;
 
     public MainFrame() {
+        try {
+            UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            e.printStackTrace();
+        }
         this.setTitle("ARISE Researcher Profiling System");
         this.setLayout(new BorderLayout(5, 5));
         this.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
@@ -76,10 +87,8 @@ public class MainFrame extends JFrame{
     }
 
     public void addAspect(JSONObject description) {
-        System.out.println(description.getString("name"));
         for (Object field : description.getJSONArray("fields")) {
             JSONObject f = (JSONObject)field;
-            System.out.println(f.getString("name") + " " + f.getString("isPK") + " " + f.getString("syntax"));
         }
         searchHandler.addAspect(description);
         initializeMenuBar();

@@ -9,6 +9,9 @@ import controllers.wrapper.aspectWrapper.GeneralAspectWrapper;
 import controllers.wrapper.aspectWrapper.indirectWrappers.LocalAspectWrapper;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+import util.MyHTTP;
+
+import static util.Constants.localServerPortNumber;
 
 public class SearchHandler{
 
@@ -106,6 +109,7 @@ public class SearchHandler{
                     registeredAspects.add(awrapper);
                 }
                 //  Inform the background service
+                MyHTTP.post("http://localhost:" + localServerPortNumber + "/reset", null);
             } catch (Exception e) {
                 if (schemaFile.exists()) {
                     schemaFile.delete();
