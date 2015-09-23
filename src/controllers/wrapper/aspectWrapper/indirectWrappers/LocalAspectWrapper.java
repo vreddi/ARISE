@@ -1,25 +1,26 @@
 package controllers.wrapper.aspectWrapper.indirectWrappers;
 
-import controllers.SearchHandler;
 import controllers.schema.SchemaReader;
 import controllers.wrapper.aspectWrapper.GeneralAspectWrapper;
 import controllers.wrapper.sourceWrapper.GeneralSourceWrapper;
 import controllers.wrapper.sourceWrapper.IndirectSourceWrapper;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
+
 import static controllers.intraAspectMatchers.InclusionCounter.countInclusion;
 
 public class LocalAspectWrapper extends GeneralAspectWrapper {
 
     private Set<GeneralSourceWrapper> registeredSources;
 
-    public LocalAspectWrapper(String aspectName, SearchHandler handler) {
+    public LocalAspectWrapper(String aspectName) {
         super(aspectName);
         String aspectBasePath = basePath + "/" + aspectName;
         SchemaReader sReader = new SchemaReader(aspectBasePath + "/schema.tsv");
@@ -40,8 +41,7 @@ public class LocalAspectWrapper extends GeneralAspectWrapper {
                     this.registeredSources.add(new IndirectSourceWrapper(
                             schema,
                             source.getName(),
-                            this.name,
-                            handler
+                            this.name
                     ));
                 }
                 File remoteList = new File(aspectBasePath + "/remoteServers.tsv");
@@ -57,8 +57,8 @@ public class LocalAspectWrapper extends GeneralAspectWrapper {
                             this.registeredSources.add(new IndirectSourceWrapper(
                                     schema,
                                     sourceName,
-                                    this.name,
-                                    handler));
+                                    this.name
+                            ));
                         }
                     } catch (Exception e) {
                         System.out.println(e.getMessage());

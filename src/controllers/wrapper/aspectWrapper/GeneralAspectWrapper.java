@@ -1,17 +1,9 @@
 package controllers.wrapper.aspectWrapper;
 
 import controllers.schema.SchemaObj;
-import controllers.schema.SchemaReader;
 import controllers.wrapper.GeneralWrapper;
-import controllers.wrapper.sourceWrapper.GeneralSourceWrapper;
-import controllers.wrapper.sourceWrapper.typeSpecificWrappers.*;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import util.Utilities;
-import java.io.File;
-import java.util.HashSet;
-import java.util.Set;
-import static controllers.intraAspectMatchers.InclusionCounter.countInclusion;
 
 
 /*
@@ -22,12 +14,6 @@ public abstract class GeneralAspectWrapper implements GeneralWrapper{
     public String name;
     protected SchemaObj schema;
     protected boolean isValid;
-
-    public GeneralAspectWrapper() {
-        this.name = null;
-        this.schema = null;
-        this.isValid = false;
-    }
 
     public GeneralAspectWrapper(String name) {
         this.name = name;

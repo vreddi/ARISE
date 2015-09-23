@@ -17,13 +17,6 @@ public abstract class GeneralSourceWrapper implements GeneralWrapper{
     protected boolean isValid;
     protected SchemaObj schema;
 
-    public GeneralSourceWrapper() {
-        this.name = null;
-        this.schema = null;
-        this.isValid = false;
-        this.isActive = false;
-    }
-
     public GeneralSourceWrapper(SchemaObj schema, String name) {
         this.name = name;
         this.schema = schema;

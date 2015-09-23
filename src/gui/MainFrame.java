@@ -10,7 +10,10 @@ import net.sf.json.JSONObject;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.event.WindowAdapter;
+import java.awt.event.WindowEvent;
 
 import static util.Utilities.getNameTokens;
 import static util.Utilities.readFileContent;
@@ -51,7 +54,14 @@ public class MainFrame extends JFrame{
         this.addWindowListener(new WindowAdapter() {
             @Override
             public void windowOpened(WindowEvent e) {
+                super.windowOpened(e);
                 spanel.promptAndFocus();
+            }
+
+            @Override
+            public void windowClosing(WindowEvent e) {
+                super.windowClosing(e);
+                searchHandler.stop();
             }
         });
         this.setMinimumSize(this.getSize());

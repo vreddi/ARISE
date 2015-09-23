@@ -5,6 +5,7 @@ import controllers.wrapper.aspectWrapper.GeneralAspectWrapper;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import util.MyHTTP;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
@@ -16,12 +17,6 @@ public class RemoteAspectWrapper extends GeneralAspectWrapper {
 
     private String url;
     public boolean isActive;
-
-    public RemoteAspectWrapper() {
-        super();
-        url = null;
-        isActive = false;
-    }
 
     public RemoteAspectWrapper(String name, String url) {
         super(name);
