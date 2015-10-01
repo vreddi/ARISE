@@ -6,20 +6,20 @@ import controllers.schema.SchemaObj;
 import controllers.schema.SchemaReader;
 import controllers.wrapper.GeneralWrapper;
 import controllers.wrapper.sourceWrapper.DirectSourceWrapper;
-import controllers.wrapper.sourceWrapper.typeSpecificWrappers.CommandlineExecutableHandler;
-import controllers.wrapper.sourceWrapper.typeSpecificWrappers.SQLDBHandler;
-import controllers.wrapper.sourceWrapper.typeSpecificWrappers.WebAPIHandler;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import util.Utilities;
-import java.io.*;
+
+import java.io.File;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.net.URLDecoder;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import static util.Utilities.constructFullSourceName;
+
 import static util.Constants.sourceExecutionTimeout;
+import static util.Utilities.constructFullSourceName;
 
 public class HTTPHandler implements HttpHandler {
 
@@ -99,7 +99,7 @@ public class HTTPHandler implements HttpHandler {
             return;
         }
         String aspect = URLDecoder.decode(matcher.group(1), "UTF-8");
-        String source = URLDecoder.decode(matcher.group(2), "UTF-8");
+        final String source = URLDecoder.decode(matcher.group(2), "UTF-8");
 
         //  Retrieve partial result
         String fullSourceName = constructFullSourceName(aspect, source);
@@ -113,7 +113,7 @@ public class HTTPHandler implements HttpHandler {
                 } catch (IOException e) {
                     System.out.println("Failed to respond to httpExchange from " + httpExchange.getRemoteAddress().toString());
                 } catch (Exception e) {
-                    System.out.println("Source execution interrupted.");
+                    System.out.println("Source " + source + " execution interrupted.");
                 }
             }
         });
@@ -178,28 +178,11 @@ public class HTTPHandler implements HttpHandler {
                             if (source.getName().startsWith(".") || !(source.isDirectory())) {
                                 continue;
                             }
-                            //  Initialize wrapper of specific kinds
-                            JSONObject settings = Utilities.readJSONObject(aspectPath + "/" + source.getName() + "/settings.json");
-                            if (settings != null) {
-                                settings.put("ofAspect", aspect.getName());
-                                String sType = settings.getString("type").trim().toLowerCase();
-                                if (sType.equals("exec")) {
-                                    localSources.put(
-                                            constructFullSourceName(aspect.getName(), source.getName()),
-                                            new CommandlineExecutableHandler(schema, source.getName(), settings)
-                                    );
-                                } else if (sType.equals("sqldb")) {
-                                    localSources.put(
-                                            constructFullSourceName(aspect.getName(), source.getName()),
-                                            new SQLDBHandler(schema, source.getName(), settings)
-                                    );
-                                } else if (sType.equals("webapi")) {
-                                    localSources.put(
-                                            constructFullSourceName(aspect.getName(), source.getName()),
-                                            new WebAPIHandler(schema, source.getName(), settings)
-                                    );
-                                }
-                            }
+                            //  Initialize wrappers
+                            localSources.put(
+                                    constructFullSourceName(aspect.getName(), source.getName()),
+                                    new DirectSourceWrapper(schema, source.getName(), aspect.getName())
+                            );
                         }
                     }
                 }

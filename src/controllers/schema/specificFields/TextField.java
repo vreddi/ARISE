@@ -30,4 +30,9 @@ public class TextField extends Field{
         }
     }
 
+    @Override
+    public boolean validate(Object value) {
+        return value instanceof String;
+    }
+
 }

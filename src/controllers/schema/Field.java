@@ -18,4 +18,6 @@ public abstract class Field {
 
     public abstract String toString(JSONObject record);
 
+    public abstract boolean validate(Object value);
+
 }

@@ -1,8 +1,10 @@
 package controllers;
 
 import com.sun.net.httpserver.HttpServer;
+
 import java.io.IOException;
 import java.net.InetSocketAddress;
+
 import static util.Constants.localServerPortNumber;
 
 public class LocalSearchServer {
@@ -49,7 +51,7 @@ public class LocalSearchServer {
         //  Guard against non-sense stop.
         if (server == null) return;
         //  Wait 3 seconds, but no more, for currently processing request to finish.
-        server.stop(3);
+        server.stop(1);
     }
 
 }

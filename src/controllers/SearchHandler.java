@@ -72,6 +72,7 @@ public class SearchHandler{
     * */
     public void stop() {
         server.stop();
+        //  Possibly cleaning up
     }
 
     public JSONObject search(JSONObject searchConditions) {
@@ -152,6 +153,7 @@ public class SearchHandler{
                     System.out.println("Error generating schema file at " + GeneralAspectWrapper.basePath + "/" + name + "/schema.tsv");
                     return;
                 }
+                writer = new BufferedWriter(new FileWriter(schemaFile.getAbsoluteFile()));
                 writer = new BufferedWriter(new FileWriter(schemaFile.getAbsoluteFile()));
                 writer.write("Field Name\tIs Primary Key\tSyntax");
                 JSONArray fields = description.getJSONArray("fields");

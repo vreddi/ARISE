@@ -1,5 +1,6 @@
 package util;
 
+
 import java.io.*;
 import java.net.*;
 import java.util.Map;
@@ -24,6 +25,7 @@ public class MyHTTP {
         try {
             //  Initialize connection
             URL urlObject = new URL(url);
+
             HttpURLConnection connection = (HttpURLConnection)urlObject.openConnection();
             connection.setDoOutput(true);
             connection.setInstanceFollowRedirects(false);
@@ -70,6 +72,7 @@ public class MyHTTP {
         try {
             //  Get connection and set parameter values
             URL urlObject = new URL(uri);
+
             HttpURLConnection connection = (HttpURLConnection) urlObject.openConnection();
             connection.setInstanceFollowRedirects(false);
             connection.setRequestMethod("GET");

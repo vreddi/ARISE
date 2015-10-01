@@ -1,8 +1,7 @@
 package tests.wrapperTests;
 
 import junit.framework.TestCase;
-import controllers.schema.SchemaObj;
-import controllers.schema.SchemaReader;
+import net.sf.json.xml.XMLSerializer;
 
 public class SchemaReaderTest extends TestCase {
 
@@ -10,7 +9,7 @@ public class SchemaReaderTest extends TestCase {
 //        SchemaReader reader = new SchemaReader("src/tests/wrapperTests/testData/publicationSchema.tsv");
 //        SchemaObj obj = reader.getSchemaObject();
 //        obj.printFields();
-        Process p = Runtime.getRuntime().exec("java -jar getJSON.jar -first Craig -last Zilles".split(" "));
-        p.waitFor();
+        XMLSerializer xml = new XMLSerializer();
+        xml.read("");
     }
 }
