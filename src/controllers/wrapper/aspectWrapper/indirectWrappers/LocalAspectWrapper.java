@@ -14,6 +14,7 @@ import java.util.HashSet;
 import java.util.Scanner;
 import java.util.Set;
 
+import static controllers.groupings.Grouper.group;
 import static controllers.intraAspectMatchers.InclusionCounter.countInclusion;
 
 public class LocalAspectWrapper extends GeneralAspectWrapper {
@@ -103,7 +104,8 @@ public class LocalAspectWrapper extends GeneralAspectWrapper {
                 }
             }
         }
-        return countInclusion(this.schema, resultFromEachSource);
+        JSONArray merged = countInclusion(this.schema, resultFromEachSource);
+        return group(merged, schema);
     }
 
     @Override
@@ -127,7 +129,8 @@ public class LocalAspectWrapper extends GeneralAspectWrapper {
                 }
             }
         }
-        return countInclusion(this.schema, resultFromEachSource);
+        JSONArray merged = countInclusion(this.schema, resultFromEachSource);
+        return group(merged, schema);
     }
 
     @Override

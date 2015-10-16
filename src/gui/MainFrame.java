@@ -14,9 +14,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.io.File;
+import java.io.IOException;
 
 import static util.Utilities.getNameTokens;
-import static util.Utilities.readFileContent;
 
 public class MainFrame extends JFrame{
 
@@ -120,14 +121,25 @@ public class MainFrame extends JFrame{
                 sourceItem.addActionListener(new ActionListener() {
                     @Override
                     public void actionPerformed(ActionEvent e) {
-                        String settings = readFileContent(GeneralWrapper.basePath + "/" + aspect + "/" + source + "/settings.json");
-                        int dialogResult = JOptionPane.showConfirmDialog(
-                            null,
-                            settings + "\nDo you want to activate or continue the activation of this source?",
-                            "Settings of " + source,
-                            JOptionPane.YES_NO_OPTION
+                        Object[] options = {"Activate", "Deactivate", "Show details"};
+                        int usersOption = JOptionPane.showOptionDialog(
+                                null,
+                                "Do you want to activate or deactivate source " + source +"?",
+                                source,
+                                JOptionPane.YES_NO_CANCEL_OPTION,
+                                JOptionPane.QUESTION_MESSAGE,
+                                null,
+                                options,
+                                options[2]
                         );
-                        searchHandler.setActivation(aspect, source, dialogResult == JOptionPane.YES_OPTION);
+                        searchHandler.setActivation(aspect, source, usersOption == 0);
+                        if (usersOption == 2) {
+                            try {
+                                Desktop.getDesktop().open(new File(GeneralWrapper.basePath + "/" + aspect + "/" + source));
+                            } catch (IOException e1) {
+                                e1.printStackTrace();
+                            }
+                        }
                     }
                 });
                 aspectItem.add(sourceItem);
@@ -138,7 +150,22 @@ public class MainFrame extends JFrame{
         addAspectItem.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                AspectAdder adder = new AspectAdder(currentFrame);
+                Object[] options = {"Source", "Aspect"};
+                int usersOption = JOptionPane.showOptionDialog(
+                        null,
+                        "Are you trying to add a source or aspect?",
+                        "Add more...",
+                        JOptionPane.YES_NO_OPTION,
+                        JOptionPane.QUESTION_MESSAGE,
+                        null,
+                        options,
+                        options[0]
+                );
+                if (usersOption == 0) {
+                    System.out.println("Add source!");
+                } else {
+                    AspectAdder adder = new AspectAdder(currentFrame);
+                }
             }
         });
         registration.add(addAspectItem);

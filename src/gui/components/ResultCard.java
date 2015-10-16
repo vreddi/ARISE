@@ -4,48 +4,76 @@ import controllers.schema.Field;
 import controllers.schema.SchemaObj;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+
 import javax.swing.*;
+import javax.swing.border.Border;
+import javax.swing.tree.DefaultMutableTreeNode;
+import javax.swing.tree.DefaultTreeCellRenderer;
 import java.awt.*;
 
 
 public class ResultCard extends JPanel{
 
-    private JTextArea textArea;
+    private JTree tree;
     private SchemaObj schema;
     private JScrollPane scrollPane;
 
     public ResultCard(JSONObject data) {
         super();
         this.schema = SchemaObj.fromJSONArray(data.getJSONArray("schema"));
-        this.textArea = new JTextArea("");
-        this.textArea.setLineWrap(true);
-        this.textArea.setEditable(false);
-        this.scrollPane = new JScrollPane(this.textArea);
-        this.scrollPane.setSize(800, 535);
-        this.scrollPane.setPreferredSize(new Dimension(800, 535));
         this.setSize(800, 540);
         this.setPreferredSize(new Dimension(800, 540));
         this.setBackground(new Color(255, 255, 255));
-        this.add(this.scrollPane);
         display(data.getJSONArray("results"));
     }
 
     public void display(JSONArray results) {
-        String toDisplay = "";
-        for (Object result : results) {
-            JSONObject current = (JSONObject)result;
-            for (Field field : schema.getAllFields()) {
-                if (current.containsKey(field.fieldName) && field.toString(current).trim().length() > 0 ) {
-                    toDisplay += field.fieldName + ": " + field.toString(current) + "\n";
+
+        DefaultMutableTreeNode top = new DefaultMutableTreeNode("All results");
+
+
+        for (int i = 0; i < results.size(); i++) {
+            JSONArray group = results.getJSONArray(i);
+            if (group.size() == 0) continue;
+            DefaultMutableTreeNode currentGroupNode = new DefaultMutableTreeNode("Group " + (i+1));
+            top.add(currentGroupNode);
+            for (int j = 0; j < group.size(); j++) {
+                JSONObject current = group.getJSONObject(j);
+                String txt = "<html>";
+                for (Field field : schema.getAllFields()) {
+                    if (current.containsKey(field.fieldName) && field.toString(current).trim().length() > 0 ) {
+                        txt += field.fieldName + ": " + field.toString(current) + "<p>";
+                    }
                 }
+                txt += "Record provided by source(s): " + current.getString("Included by") + "</html>";
+                DefaultMutableTreeNode node = new DefaultMutableTreeNode(txt);
+                currentGroupNode.add(node);
             }
-            toDisplay += "Record provided by source(s): " + current.getString("Included by");
-            toDisplay += "\n\n";
         }
-        if (toDisplay.length() == 0) {
-            toDisplay = "No record found for this researcher.";
-        }
-        this.textArea.setText(toDisplay);
+
+        this.tree = new JTree(top);
+        tree.setRowHeight(0);
+        tree.setCellRenderer(new DefaultTreeCellRenderer() {
+            private Border border = BorderFactory.createEmptyBorder ( 6, 6, 6, 6 );
+            public Component getTreeCellRendererComponent ( JTree tree, Object value, boolean sel,
+                                                            boolean expanded, boolean leaf, int row,
+                                                            boolean hasFocus )
+            {
+                JLabel label = ( JLabel ) super
+                        .getTreeCellRendererComponent ( tree, value, sel, expanded, leaf, row,
+                                hasFocus );
+                label.setBorder ( border );
+                return label;
+            }
+        });
+        this.tree.putClientProperty("JTree.lineStyle", "Horizontal");
+        this.scrollPane = new JScrollPane(this.tree);
+        this.add(this.scrollPane);
+        this.scrollPane.setSize(800, 535);
+        this.scrollPane.setPreferredSize(new Dimension(800, 535));
+        this.tree.setVisible(true);
+        this.scrollPane.setVisible(true);
+
     }
 
 }

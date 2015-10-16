@@ -4,3 +4,4 @@ Author(s)	No	Text
 Affiliation(s)	No	Text
 Publisher	Yes	Text
 Year	Yes	Integer
+Citations	No	LongInteger

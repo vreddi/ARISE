@@ -46,6 +46,7 @@ public class AspectAdder extends JFrame {
             syntax.addItem("Text");
             syntax.addItem("Integer");
             syntax.addItem("LongInteger");
+            syntax.addItem("Decimal");
             syntax.setSize(syntaxWidth, lineHeight);
             syntax.setPreferredSize(new Dimension(syntaxWidth, lineHeight));
             this.setVisible(true);
@@ -135,7 +136,7 @@ public class AspectAdder extends JFrame {
             }
         });
         this.setSize(
-                nameWidth + pkWidth + syntaxWidth,
+                nameWidth + pkWidth + syntaxWidth + 5,
                 name.getHeight() + nameLabel.getHeight() + lines.getHeight() + addLineButton.getHeight() + 45
         );
         this.setResizable(false);
@@ -154,6 +155,7 @@ public class AspectAdder extends JFrame {
         AspectLine line = new AspectLine();
         fields.add(line);
         lines.add(line);
+        lines.setComponentZOrder(line, fields.size() - 1);
         this.validate();
         this.repaint();
     }

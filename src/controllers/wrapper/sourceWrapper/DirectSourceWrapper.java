@@ -39,8 +39,10 @@ public class DirectSourceWrapper extends GeneralSourceWrapper {
         String unitsFolder = basePath + "/" + aspect + "/" + name + "/units/";
 
         //  Compilation starts here
-        File dest = new File(destinationPath);
-        if (!dest.exists()) dest.mkdir();
+        File dest = new File(unitsFolder);
+        if (!dest.exists()) dest.mkdirs();
+        dest = new File(destinationPath);
+        if (!dest.exists()) dest.mkdirs();
         int errorCode = Main.compile(new String[] {
                 "-d", destinationPath,
                 unitsFolder + "MyGetter.java"
@@ -64,8 +66,10 @@ public class DirectSourceWrapper extends GeneralSourceWrapper {
         }
         for (String field : schema.getAllFieldsAsStrings()) {
             //  Each field extractors is put inside a folder to avoid invalid field name as class name.
+            File srcFolder = new File(unitsFolder + "FieldExtractors/" + field + "/MyFieldExtractor.java");
+            if (!srcFolder.exists())  continue;;
             dest = new File(destinationPath + "/FieldExtractors/" + field);
-            if (!dest.exists()) dest.mkdir();
+            if (!dest.exists()) dest.mkdirs();
             errorCode = Main.compile(new String[]{
                     "-d", destinationPath + "/FieldExtractors/" + field,
                     unitsFolder + "FieldExtractors/" + field + "/MyFieldExtractor.java"
@@ -114,7 +118,9 @@ public class DirectSourceWrapper extends GeneralSourceWrapper {
         //  Load field extractor(s)
         this.fieldExtractorMap = new HashMap<String, FieldExtractor>();
         for (String field : schema.getAllFieldsAsStrings()) {
-            classesDir = new File(destinationPath + "/FieldExtractors/" + field).toURI().toURL();
+            File dir = new File(destinationPath + "/FieldExtractors/" + field);
+            if (!dir.exists()) continue;
+            classesDir = dir.toURI().toURL();
             parentLoader = FieldExtractor.class.getClassLoader();
             loader = new URLClassLoader(
                     new URL[] { classesDir }, parentLoader

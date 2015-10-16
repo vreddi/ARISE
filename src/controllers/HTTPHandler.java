@@ -60,7 +60,7 @@ public class HTTPHandler implements HttpHandler {
     * */
     private void sendResponse(HttpExchange httpExchange, int code, String response) throws IOException{
         if (response != null && code >= 200 && code <= 600) {
-            httpExchange.sendResponseHeaders(code, response.length());
+            httpExchange.sendResponseHeaders(code, response.getBytes().length);
             OutputStream output = httpExchange.getResponseBody();
             output.write(response.getBytes());
             output.close();
@@ -98,12 +98,17 @@ public class HTTPHandler implements HttpHandler {
             sendError400(httpExchange);
             return;
         }
-        String aspect = URLDecoder.decode(matcher.group(1), "UTF-8");
+        final String aspect = URLDecoder.decode(matcher.group(1), "UTF-8");
         final String source = URLDecoder.decode(matcher.group(2), "UTF-8");
 
         //  Retrieve partial result
         String fullSourceName = constructFullSourceName(aspect, source);
         final DirectSourceWrapper wrapper = localSources.get(fullSourceName);
+        String cwd = System.getProperty("user.dir");
+        System.setProperty(
+                "user.dir",
+                cwd + (cwd.endsWith("/") ? "" : "/") + GeneralWrapper.basePath + "/" + aspect + "/" + source + "/"
+        );
         Thread thread = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -112,6 +117,7 @@ public class HTTPHandler implements HttpHandler {
                     sendResponse(httpExchange, 200, result.toString());
                 } catch (IOException e) {
                     System.out.println("Failed to respond to httpExchange from " + httpExchange.getRemoteAddress().toString());
+                    e.printStackTrace();
                 } catch (Exception e) {
                     System.out.println("Source " + source + " execution interrupted.");
                 }
@@ -124,6 +130,8 @@ public class HTTPHandler implements HttpHandler {
             thread.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        } finally {
+            System.setProperty("user.dir", cwd);
         }
     }
 
