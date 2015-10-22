@@ -1,0 +1,6 @@
+Field Name	Is Primary Key	Syntax
+Title	Yes	Text
+Authors	No	List of Texts
+Venue	No	Text
+Year	No	Integer
+#Cita-ons	No	Integer
