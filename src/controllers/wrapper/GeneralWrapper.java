@@ -1,5 +1,6 @@
 package controllers.wrapper;
 
+import net.sf.json.JSON;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 
@@ -10,7 +11,7 @@ public interface GeneralWrapper {
 
     String basePath = "aspects";
 
-    JSONArray getResultAsJSONArray(JSONObject searchConditions);
+    JSON getResultAsJSON(JSONObject searchConditions);
 
     void print();
 

@@ -161,7 +161,7 @@ public class DirectSourceWrapper extends GeneralSourceWrapper {
     * A execution of a query reduces to utilization of all the functioanl parts.
     * */
     @Override
-    public JSONArray getResultAsJSONArray(JSONObject searchConditions) {
+    public JSONArray getResultAsJSON(JSONObject searchConditions) {
         try {
             Object rawResponse = getter.getResult(searchConditions);
             JSON JSONResponse = formatter.convertToJSON(rawResponse);
@@ -177,7 +177,7 @@ public class DirectSourceWrapper extends GeneralSourceWrapper {
                             FieldExtractor extractor = fieldExtractorMap.get(field.fieldName);
                             Object extractedValue = extractor.extractField(tuple);
                             //  Sanity check for variable types
-                            if (field.validate(extractedValue))
+//                            if (field.validate(extractedValue))
                                 construct.put(field.fieldName, extractedValue);
                         } catch (Exception e) {
                             continue;   //  Does nothing, skip this value

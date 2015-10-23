@@ -113,7 +113,7 @@ public class HTTPHandler implements HttpHandler {
             @Override
             public void run() {
                 try {
-                    JSONArray result = wrapper.getResultAsJSONArray(searchConditions);
+                    JSONArray result = wrapper.getResultAsJSON(searchConditions);
                     sendResponse(httpExchange, 200, result.toString());
                 } catch (IOException e) {
                     System.out.println("Failed to respond to httpExchange from " + httpExchange.getRemoteAddress().toString());

@@ -81,7 +81,7 @@ public class SearchHandler{
             if (registeredAspect.isActivated()) {
                 JSONObject temp = new JSONObject();
                 temp.put("schema", registeredAspect.getSchema().toJSONArray());
-                temp.put("results", registeredAspect.timedGetResultAsJSONArray(searchConditions));
+                temp.put("results", registeredAspect.timedGetResultAsJSON(searchConditions));
                 results.put(registeredAspect.name, temp);
             }
         }

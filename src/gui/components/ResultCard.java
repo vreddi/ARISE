@@ -4,12 +4,14 @@ import controllers.schema.Field;
 import controllers.schema.SchemaObj;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+import util.Constants;
 
 import javax.swing.*;
 import javax.swing.border.Border;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeCellRenderer;
 import java.awt.*;
+import java.util.Map;
 
 
 public class ResultCard extends JPanel{
@@ -24,25 +26,32 @@ public class ResultCard extends JPanel{
         this.setSize(800, 540);
         this.setPreferredSize(new Dimension(800, 540));
         this.setBackground(new Color(255, 255, 255));
-        display(data.getJSONArray("results"));
+        display(data.getJSONObject("results"));
     }
 
-    public void display(JSONArray results) {
+    public void display(JSONObject results) {
 
-        DefaultMutableTreeNode top = new DefaultMutableTreeNode("All results");
+        DefaultMutableTreeNode top = new DefaultMutableTreeNode("Keywords:");
 
 
-        for (int i = 0; i < results.size(); i++) {
-            JSONArray group = results.getJSONArray(i);
+        for (Object e : results.entrySet()) {
+            Map.Entry<String, JSONArray> ent = (Map.Entry)e;
+            String[] kws = ent.getKey().split(Constants.kwDelimiter);
+            JSONArray group = ent.getValue();
             if (group.size() == 0) continue;
-            DefaultMutableTreeNode currentGroupNode = new DefaultMutableTreeNode("Group " + (i+1));
+            String groupName = "";
+            for (int i = 0; i < kws.length; i++) {
+                groupName += kws[i] + ", ";
+            }
+            groupName = groupName.substring(0, groupName.length()-2);
+            DefaultMutableTreeNode currentGroupNode = new DefaultMutableTreeNode(groupName);
             top.add(currentGroupNode);
             for (int j = 0; j < group.size(); j++) {
                 JSONObject current = group.getJSONObject(j);
                 String txt = "<html>";
                 for (Field field : schema.getAllFields()) {
                     if (current.containsKey(field.fieldName) && field.toString(current).trim().length() > 0 ) {
-                        txt += field.fieldName + ": " + field.toString(current) + "<p>";
+                        txt += "<b>" + field.fieldName + "</b>: " + field.toString(current) + "<p>";
                     }
                 }
                 txt += "Record provided by source(s): " + current.getString("Included by") + "</html>";

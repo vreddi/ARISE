@@ -41,13 +41,13 @@ public class RemoteAspectWrapper extends GeneralAspectWrapper {
     }
 
     @Override
-    public JSONArray getResultAsJSONArray(JSONObject searchConditions) {
+    public JSONObject getResultAsJSON(JSONObject searchConditions) {
         Map<String, String> params = new HashMap<String, String>();
         for (Object k : searchConditions.keySet()) {
             String key = (String)k;
             params.put(key, searchConditions.getString(key));
         }
-        return JSONArray.fromObject(MyHTTP.get(url, params));
+        return JSONObject.fromObject(MyHTTP.get(url, params));
     }
 
     @Override
@@ -56,10 +56,10 @@ public class RemoteAspectWrapper extends GeneralAspectWrapper {
     }
 
     @Override
-    public JSONArray timedGetResultAsJSONArray(JSONObject searchConditions)  {
+    public JSONObject timedGetResultAsJSON(JSONObject searchConditions)  {
         System.out.println("Retrieving data pertaining to aspect " + name + ".");
         long startTime = System.currentTimeMillis();
-        JSONArray ret = getResultAsJSONArray(searchConditions);
+        JSONObject ret = getResultAsJSON(searchConditions);
         long endTime = System.currentTimeMillis();
         System.out.println("Aspect " + name + " finished execution. Time elapsed: " + ((double)(endTime - startTime)/1000.0) + " seconds.");
         return ret;

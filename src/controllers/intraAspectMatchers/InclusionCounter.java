@@ -3,14 +3,13 @@ package controllers.intraAspectMatchers;
 import controllers.schema.SchemaObj;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import java.util.Iterator;
 
-import static util.Utilities.generalComparison;
+import java.util.Iterator;
 
 public class InclusionCounter {
 
     public static JSONArray countInclusion(SchemaObj schema, JSONObject records) {
-        /*
+    	/*
         *   Mark initial inclusion on every records
         */
         for (Iterator sources = records.keys(); sources.hasNext();) {
@@ -22,6 +21,7 @@ public class InclusionCounter {
                 }
             }
         }
+        
         /*
         *   merging
         */
@@ -49,5 +49,5 @@ public class InclusionCounter {
         }
         return ret;
     }
-
+    
 }

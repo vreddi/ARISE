@@ -29,11 +29,11 @@ public abstract class GeneralAspectWrapper implements GeneralWrapper{
         return this.schema;
     }
 
-    public abstract JSONArray getResultAsJSONArray(JSONObject searchConditions);
+    public abstract JSONObject getResultAsJSON(JSONObject searchConditions);
 
     public abstract JSONArray getRegisteredSources();
 
-    public abstract JSONArray timedGetResultAsJSONArray(JSONObject searchConditions);
+    public abstract JSONObject timedGetResultAsJSON(JSONObject searchConditions);
 
     public abstract boolean isActivated();
 

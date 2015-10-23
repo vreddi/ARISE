@@ -94,11 +94,11 @@ public class LocalAspectWrapper extends GeneralAspectWrapper {
     }
 
     @Override
-    public JSONArray getResultAsJSONArray(JSONObject searchConditions) {
+    public JSONObject getResultAsJSON(JSONObject searchConditions) {
         JSONObject resultFromEachSource = new JSONObject();
         for (GeneralSourceWrapper registeredSource : this.registeredSources) {
             if (registeredSource.isActive) {
-                JSONArray result = registeredSource.getResultAsJSONArray(searchConditions);
+                JSONArray result = registeredSource.getResultAsJSON(searchConditions);
                 if (result != null) {
                     resultFromEachSource.put(registeredSource.name, result);
                 }
@@ -119,11 +119,11 @@ public class LocalAspectWrapper extends GeneralAspectWrapper {
     }
 
     @Override
-    public JSONArray timedGetResultAsJSONArray(JSONObject searchConditions) {
+    public JSONObject timedGetResultAsJSON(JSONObject searchConditions) {
         JSONObject resultFromEachSource = new JSONObject();
         for (GeneralSourceWrapper registeredSource : this.registeredSources) {
             if (registeredSource.isActive) {
-                JSONArray result = registeredSource.timedGetResultAsJSONArray(searchConditions);
+                JSONArray result = registeredSource.timedGetResultAsJSON(searchConditions);
                 if (result != null) {
                     resultFromEachSource.put(registeredSource.name, result);
                 }

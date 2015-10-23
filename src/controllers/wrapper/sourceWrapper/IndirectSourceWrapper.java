@@ -22,7 +22,7 @@ public class IndirectSourceWrapper extends GeneralSourceWrapper {
     }
 
     @Override
-    public JSONArray getResultAsJSONArray(JSONObject searchConditions) {
+    public JSONArray getResultAsJSON(JSONObject searchConditions) {
         Map<String, String> params = new HashMap<String, String>();
         for (Object k : searchConditions.keySet()) {
             String key = (String)k;

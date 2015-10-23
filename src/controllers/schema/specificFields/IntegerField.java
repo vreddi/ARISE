@@ -10,8 +10,18 @@ public class IntegerField extends Field{
     }
 
     @Override
-    public boolean equals(Object o1, Object o2) {
-        return o1.toString().trim().equalsIgnoreCase(o2.toString().trim());
+    public int equalHelper(Object o1, Object o2) {
+    	int i1 = Integer.parseInt(o1.toString());
+    	int i2 = Integer.parseInt(o2.toString());
+    	if (i1 < 2500 && i2 < 2500) {
+    		if ( Math.abs(i1 - i2) <= 2) return 2;
+    		if ( Math.abs(i1 - i2) <= 3) return 1;
+    	}
+    	else {
+    		if ( (double)(i1 - i2)/(double)Math.max(i1, i2) <= 0.002) return 2;
+    		if ( (double)(i1 - i2)/(double)Math.max(i1, i2) <= 0.005) return 1;
+    	}
+        return 0;
     }
 
     @Override
@@ -30,9 +40,20 @@ public class IntegerField extends Field{
         }
     }
 
-    @Override
-    public boolean validate(Object value) {
-        return value instanceof Integer;
+    /**
+     * Test IntegerField comparison
+    public static void main(String[] args) {
+    	Field f = new IntegerField("test", true, "Integer");
+    	Field g = new IntegerField("test2", false, "Integer");
+    	String s1 = "2012";
+    	String s2 = "2010";
+    	String s3 = "2005";
+    	int sim = f.equals(s1, s2);
+    	int sim2 = f.equals(s1, s3);
+    	int sim3 = g.equals(s1, s3);
+    	System.out.println("primary1: "+sim);
+    	System.out.println("primary2: "+sim2);
+    	System.out.println("non primary: "+sim3);
     }
-
+    */
 }

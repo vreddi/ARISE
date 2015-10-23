@@ -3,9 +3,8 @@ package controllers.schema;
 import controllers.schema.specificFields.*;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
-import java.util.ArrayList;
 
-import static util.Utilities.generalComparison;
+import java.util.ArrayList;
 
 public class SchemaObj {
 
@@ -14,11 +13,11 @@ public class SchemaObj {
     public SchemaObj() {
         this.fields = new ArrayList<Field>(0);
     }
-
+    
     public void addField(String fieldName, String isPK, String dataType) {
         boolean isPrimaryKey = isPK.equals("Yes");
         addField(fieldName, isPrimaryKey, dataType);
-    }
+    }    
 
     private void addField(String fieldName, boolean isPK, String dataType) {
         Field f = null;
@@ -28,7 +27,11 @@ public class SchemaObj {
             f = new IntegerField(fieldName, isPK, dataType);
         } else if (dataType.equalsIgnoreCase("LongInteger")) {
             f = new LongIntegerField(fieldName, isPK, dataType);
-        }
+        } else if (dataType.equalsIgnoreCase("Name")) {
+        	f = new NameField(fieldName, isPK, dataType);
+        } else if (dataType.equalsIgnoreCase("Location")) {
+        	f = new LocationField(fieldName, isPK, dataType);
+        } // Location is for attributes that have acronyms and have a real world location association
         this.fields.add(f);
     }
 
@@ -66,31 +69,53 @@ public class SchemaObj {
             } else if (curResolvedRec.containsKey(fieldName) && rec.containsKey(fieldName)) {
                 Object resolvedField = curResolvedRec.get(fieldName);
                 Object newField = rec.get(fieldName);
-                if (!field.equals(resolvedField, newField)) {
+                if (field.equals(resolvedField, newField) != 2) {
                     if (resolvedField instanceof JSONObject) {
                         ((JSONObject)resolvedField).put(rec.getString("Included by"), newField);
                     } else {
                         JSONObject conflictField = new JSONObject();
                         conflictField.put(curResolvedRec.getString("Included by"), resolvedField);
                         conflictField.put(rec.getString("Included by"), newField);
-                        curResolvedRec.replace(fieldName, conflictField);
+                        curResolvedRec.put(fieldName, conflictField);
                     }
                 }
             }
         }
         String newInclusion = curResolvedRec.getString("Included by") + ", " + rec.getString("Included by");
-        curResolvedRec.replace("Included by", newInclusion);
+        curResolvedRec.put("Included by", newInclusion);
     }
 
+  /**
+   * @param record1
+   * @param record2
+   * @return
+   */
     public boolean mergeable(JSONObject record1, JSONObject record2) {
-        for (Field field : this.getPrimaryKeys()) {
+    	/**
+    	 * Set of rules to determine whether the records match
+    	 */
+    	int primaryMatch = 0;
+    	int primaryMaybe = 0;
+    	int nonPrimaryMatch = 0;
+    	int nonPrimaryMaybe = 0;
+        for (Field field : this.fields) {
             String fieldName = field.fieldName;
-            if (record1.containsKey(fieldName) && record2.containsKey(fieldName)
-                    && !field.equals(record1.get(fieldName), record2.get(fieldName))) {
-                return false;
+            if (record1.containsKey(fieldName) && record2.containsKey(fieldName)) {
+            	if (field.isPrimaryKey) {
+            		int temp = field.equals(record1.get(fieldName), record2.get(fieldName));
+            		if (temp == 0) return false;
+            		if (temp == 2) primaryMatch++;
+            		else primaryMaybe++;
+            	}
+            	else {
+            		int temp = field.equals(record1.get(fieldName), record2.get(fieldName));
+            		if (temp >= 1) nonPrimaryMatch++;
+            		if (temp == 0) nonPrimaryMaybe++;
+            	}
             }
         }
-        return true;
+        if (primaryMatch >= primaryMaybe*3 && nonPrimaryMatch >= nonPrimaryMaybe*2) return true; 
+        return false;
     }
 
     public JSONArray toJSONArray() {

@@ -29,17 +29,17 @@ public abstract class GeneralSourceWrapper implements GeneralWrapper{
     }
 
     @Override
-    public abstract JSONArray getResultAsJSONArray(JSONObject searchConditions);
+    public abstract JSONArray getResultAsJSON(JSONObject searchConditions);
 
     @Override
     public void print() {
         System.out.println("\t" + name);
     }
 
-    public JSONArray timedGetResultAsJSONArray(JSONObject searchConditions) {
+    public JSONArray timedGetResultAsJSON(JSONObject searchConditions) {
         System.out.println("Souce " + name + " started execution.");
         long startTime = System.currentTimeMillis();
-        JSONArray ret = getResultAsJSONArray(searchConditions);
+        JSONArray ret = getResultAsJSON(searchConditions);
         long endTime = System.currentTimeMillis();
         System.out.println("Source " + name + " ended execution. Time elapsed: " + ((double)(endTime - startTime)/1000.0) + " seconds.");
         return ret;

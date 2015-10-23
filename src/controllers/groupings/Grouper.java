@@ -5,27 +5,36 @@ import controllers.schema.SchemaObj;
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
 import org.apache.commons.lang.StringUtils;
+import util.Constants;
 
 import java.util.*;
 
 public class Grouper {
 
-    public static JSONArray group(JSONArray records, SchemaObj schema) {
+    public static JSONObject group(JSONArray records, SchemaObj schema) {
 
         int numRecords = records.size();
         ArrayList<Field> fields = schema.getAllFields();
+        String[] kwIgnore = {"a", "an", "the", "is", "and", "of", "at", "from", "to", "or", "for", "in", "on", "onto", "into",
+                ",", ".", ":", ";", "-", "", " ", "  ", "   ", "    ", "\t", "\t\t", "\t\t\t"};
 
         //  Computes keywords
         TreeMap keywords = new TreeMap<String, ArrayList<String>>();
         for (Field field : fields) {
-            if (field.dataType.equalsIgnoreCase("Text")) {
+            if (field.dataType.equalsIgnoreCase("Text") || field.dataType.equalsIgnoreCase("Location")) {
                 Map counts = new HashMap<String, Integer>();
                 for (Object record : records) {
                     JSONObject cur = (JSONObject)record;
                     if (cur.containsKey(field.fieldName)) {
-                        String curVal = cur.getString(field.fieldName);
+                        String curVal = cur.getString(field.fieldName).trim();
                         String[] words = curVal.split("\\W");
                         for (String word : words) {
+                            if (word.length() == 1) continue;
+                            boolean ignored = false;
+                            for (String ignore : kwIgnore) {
+                                if (word.equalsIgnoreCase(ignore)) ignored = true;
+                            }
+                            if (ignored) continue;
                             if (counts.containsKey(word)) {
                                 int c = (Integer)counts.get(word);
                                 counts.replace(word, c+1);
@@ -40,7 +49,7 @@ public class Grouper {
                 Set ent = counts.entrySet();
                 for (Object e : ent) {
                     Map.Entry curEnt = (Map.Entry) e;
-                    if ((Integer)curEnt.getValue() * 5 >= numRecords) {
+                    if ((Integer)curEnt.getValue() * 10 >= numRecords) {
                         kws.add((String)curEnt.getKey());
                     }
                 }
@@ -145,9 +154,54 @@ public class Grouper {
             int c = belongings[i];
             clusters[c].add(records.get(i));
         }
-        JSONArray ret = new JSONArray();
+        JSONObject ret = new JSONObject();
         for (int i = 0; i < numClusters; i++) {
-            ret.add(clusters[i]);
+            //  Finding keywords
+            int kw1_index = -1;
+            int kw2_index = -1;
+            int kw3_index = -1;
+            double freq1 = -1;
+            double freq2 = -1;
+            double freq3 = -1;
+            for (int j = 0; j < numKWs; j++) {
+                double cur = centroids[i][j];
+                if (cur > freq1) {
+                    freq3 = freq2;
+                    kw3_index = kw2_index;
+                    freq2 = freq1;
+                    kw2_index = kw1_index;
+                    freq1 = cur;
+                    kw1_index = j;
+                } else if (cur > freq2) {
+                    freq3 = freq2;
+                    kw3_index = kw2_index;
+                    freq2 = cur;
+                    kw2_index = j;
+                } else if (cur > freq3) {
+                    freq3 = cur;
+                    kw3_index = j;
+                }
+            }
+
+            //  Convert back to String
+            String kw1 = "", kw2 = "", kw3 = "";
+            int passed = 0;
+            for (Object e : keywords.entrySet()) {
+                Map.Entry<String, ArrayList<String>> ent = (Map.Entry<String, ArrayList<String>>)e;
+                ArrayList<String> kws = ent.getValue();
+                if (passed <= kw1_index && kw1_index < passed + kws.size()) {
+                    kw1 = kws.get(kw1_index - passed);
+                }
+                if (passed <= kw2_index && kw2_index < passed + kws.size()) {
+                    kw2 = kws.get(kw2_index - passed);
+                }
+                if (passed <= kw3_index && kw3_index < passed + kws.size()) {
+                    kw3 = kws.get(kw3_index - passed);
+                }
+                passed += kws.size();
+            }
+
+            ret.put(kw1 + Constants.kwDelimiter + kw2 + Constants.kwDelimiter + kw3, clusters[i]);
         }
 
         return ret;
