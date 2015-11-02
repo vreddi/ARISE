@@ -32,9 +32,10 @@ public class MyGetter implements Getter {
      *
      * @return apiKey :: The API key to validate the source
      */
+     // TODO -> Make the Key Secret
 	public String getApiKey(){
 
-	    return "19b4b3546222699157deac547bc8e232";
+	    return "xxx-xxxxxx-xxxxxx-xxx";
 	}
 
 
