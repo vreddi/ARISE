@@ -2,16 +2,44 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0fbc774a-af27-473a-be81-ff27e1550231" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Affiliation(s)/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Author(s)/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Citations/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Publisher/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Title/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Year/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyGetter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyTupleExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/components/graph.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/graphAnalyzer/GlobalGraphInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/graphAnalyzer/GraphAnalyzer.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Affiliation(s)/MyFieldExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Author(s)/MyFieldExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Title/MyFieldExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Year/MyFieldExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/FieldExtractors/Affiliation(s)/MyFieldExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/FieldExtractors/Author(s)/MyFieldExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/FieldExtractors/Citations/MyFieldExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/FieldExtractors/Publisher/MyFieldExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/FieldExtractors/Title/MyFieldExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/FieldExtractors/Year/MyFieldExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyFormatter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyGetter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyGetter.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyTupleExtractor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyTupleExtractor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/DesktopApp.class" afterPath="$PROJECT_DIR$/out/production/ARISE/DesktopApp.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Publication/Scopus/MyFormatter.class" afterPath="$PROJECT_DIR$/bin/Publication/Scopus/MyFormatter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Publication/IEEE Xplore/MyGetter.class" afterPath="$PROJECT_DIR$/bin/Publication/IEEE Xplore/MyGetter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Publication/Scopus/MyGetter.class" afterPath="$PROJECT_DIR$/bin/Publication/Scopus/MyGetter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Publication/Scopus/MyTupleExtractor.class" afterPath="$PROJECT_DIR$/bin/Publication/Scopus/MyTupleExtractor.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/gui/components/ResultCard$1.class" afterPath="$PROJECT_DIR$/out/production/ARISE/gui/components/ResultCard$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/gui/components/ResultCard.class" afterPath="$PROJECT_DIR$/out/production/ARISE/gui/components/ResultCard.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$1.class" afterPath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$2.class" afterPath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$3.class" afterPath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$3.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$4.class" afterPath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel.class" afterPath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DesktopApp.java" afterPath="$PROJECT_DIR$/src/DesktopApp.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyFormatter.java" afterPath="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyFormatter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyGetter.java" afterPath="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyGetter.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyTupleExtractor.java" afterPath="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyTupleExtractor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/components/ResultCard.java" afterPath="$PROJECT_DIR$/src/gui/components/ResultCard.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/components/SearchPanel.java" afterPath="$PROJECT_DIR$/src/gui/components/SearchPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ARISE.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -32,7 +60,49 @@
     <favorites_list name="ARISE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="MyTupleExtractor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyTupleExtractor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyGetter.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyGetter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="169" column="48" selection-start-line="169" selection-start-column="48" selection-end-line="169" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#3370#3379#0" expanded="true" />
+                <element signature="e#4699#4708#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MyGetter.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/MyGetter.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.46089387">
+              <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -45,7 +115,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyTupleExtractor.java" />
         <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Affiliation(s)/MyFieldExtractor.java" />
         <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Author(s)/MyFieldExtractor.java" />
         <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Publisher/MyFieldExtractor.java" />
@@ -54,6 +123,23 @@
         <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Year/MyFieldExtractor.java" />
         <option value="$PROJECT_DIR$/aspects/Publication/IEEE Xplore/units/MyTupleExtractor.java" />
         <option value="$PROJECT_DIR$/aspects/Publication/IEEE Xplore/units/MyGetter.java" />
+        <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyFormatter.java" />
+        <option value="$PROJECT_DIR$/src/util/MyHTTP.java" />
+        <option value="$PROJECT_DIR$/src/DesktopApp.java" />
+        <option value="$PROJECT_DIR$/src/controllers/graphAnalyzer/globalGraphInfo.java" />
+        <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyTupleExtractor.java" />
+        <option value="$PROJECT_DIR$/src/gui/components/SearchPanel.java" />
+        <option value="$PROJECT_DIR$/src/controllers/graphAnalyzer/GlobalGraphInfo.java" />
+        <option value="$PROJECT_DIR$/src/controllers/graphAnalyzer/GraphAnalyzer.java" />
+        <option value="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyTupleExtractor.java" />
+        <option value="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Affiliation(s)/MyFieldExtractor.java" />
+        <option value="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Author(s)/MyFieldExtractor.java" />
+        <option value="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Title/MyFieldExtractor.java" />
+        <option value="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Year/MyFieldExtractor.java" />
+        <option value="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyGetter.java" />
+        <option value="$PROJECT_DIR$/src/gui/components/ResultCard.java" />
+        <option value="$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyTupleExtractor.java" />
+        <option value="$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyGetter.java" />
         <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyGetter.java" />
       </list>
     </option>
@@ -69,9 +155,10 @@
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
+    <option name="x" value="1697" />
+    <option name="y" value="87" />
     <option name="width" value="1440" />
-    <option name="height" value="812" />
+    <option name="height" value="813" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -96,6 +183,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -203,38 +291,11 @@
               <option name="myItemId" value="aspects" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Publication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="IEEE Xplore" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="units" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARISE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARISE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aspects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -247,10 +308,13 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Citations" />
+      <recent name="$PROJECT_DIR$/aspects/Publication/Microsoft Academics" />
+      <recent name="$PROJECT_DIR$/src/gui/components/adders" />
       <recent name="$PROJECT_DIR$/aspects/Publication" />
+      <recent name="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Citations" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/gui/components" />
       <recent name="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors" />
     </key>
   </component>
@@ -258,6 +322,26 @@
     <configuration default="false" name="DesktopApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="DesktopApp" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="ARISE" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="GraphAnalyzer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="controllers.graphAnalyzer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="controllers.graphAnalyzer.GraphAnalyzer" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -417,12 +501,14 @@
       <listeners />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Application.DesktopApp" />
+      <item index="1" class="java.lang.String" itemvalue="Application.GraphAnalyzer" />
     </list>
     <recent_temporary>
-      <list size="1">
+      <list size="2">
         <item index="0" class="java.lang.String" itemvalue="Application.DesktopApp" />
+        <item index="1" class="java.lang.String" itemvalue="Application.GraphAnalyzer" />
       </list>
     </recent_temporary>
   </component>
@@ -437,30 +523,30 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="812" extended-state="6" />
+    <frame x="1697" y="87" width="1440" height="813" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3297587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.36608344" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32974428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3655914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
@@ -469,7 +555,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="4" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -477,11 +565,18 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyGetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/MyFormatter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -584,54 +679,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/MyTupleExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21176471">
-          <caret line="12" column="60" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/MyFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/aspects/Publication/IEEE Xplore/units/MyFormatter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="3" column="16" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.49019608">
-          <caret line="28" column="11" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/DesktopApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12254902">
-          <caret line="5" column="39" selection-start-line="5" selection-start-column="39" selection-end-line="5" selection-end-column="39" />
-          <folding>
-            <element signature="e#94#95#0" expanded="true" />
-            <element signature="e#146#147#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/SearchHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.033860046">
-          <caret line="19" column="13" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -639,7 +690,88 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4401806">
           <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/MyFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5756208">
+          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/schema/SchemaReader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.37246048">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/components/graph.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/LocalSearchServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.8888888">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/SearchHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.111111">
+          <caret line="70" column="34" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/wrapper/GeneralWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/groupings/Grouper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/wrapper/sourceWrapper/GeneralSourceWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/wrapper/aspectWrapper/indirectWrappers/RemoteAspectWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="46" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/wrapper/sourceWrapper/interfaces/Getter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.23702031">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/HTTPHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="161" column="59" selection-start-line="161" selection-start-column="58" selection-end-line="161" selection-end-column="59" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/wrapper/sourceWrapper/interfaces/TupleExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27088037">
+          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
         </state>
       </provider>
     </entry>
@@ -647,22 +779,153 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.101580136">
           <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/MyTupleExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42437923">
+          <caret line="23" column="92" selection-start-line="23" selection-start-column="92" selection-end-line="23" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/util/MyHTTP.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16930023">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/wrapper/sourceWrapper/DirectSourceWrapper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.17307693">
+          <caret line="71" column="41" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DesktopApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16930023">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/graphAnalyzer/GraphAnalyzer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/components/SearchPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33860046">
+          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controllers/graphAnalyzer/GlobalGraphInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.06772009">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyFormatter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Affiliation(s)/MyFieldExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/MainFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="179" column="65" selection-start-line="179" selection-start-column="47" selection-end-line="179" selection-end-column="65" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/components/ResultPanel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/gui/components/ResultCard.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8645598">
+          <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyTupleExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3047404">
+          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Author(s)/MyFieldExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27088037">
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Title/MyFieldExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.16930023">
+          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Year/MyFieldExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3047404">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyGetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.52374303">
+          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyTupleExtractor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyGetter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="169" column="48" selection-start-line="169" selection-start-column="48" selection-end-line="169" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3370#3379#0" expanded="true" />
+            <element signature="e#4699#4708#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/MyGetter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47404063">
-          <caret line="23" column="42" selection-start-line="23" selection-start-column="42" selection-end-line="23" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/HTTPHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.40632054">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        <state vertical-scroll-proportion="0.46089387">
+          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
           <folding />
         </state>
       </provider>
