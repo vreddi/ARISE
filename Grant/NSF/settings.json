@@ -1,0 +1,17 @@
+{
+    "type" : "sqldb",
+    "dbkind" : "mysql",
+    "location" : "http://127.0.0.1:3306/NSFGrant",
+    "sqltemplate" : "SELECT * FROM Award WHERE PIFirstName = '[[first]]' AND PILastName = '[[last]]';",
+    "user" : "ARISE",
+    "password" : "password",
+    "mappings" : {
+        "First Name": "PIFirstName",
+        "Last Name": "PILastName",
+        "Middle Name": "PIMiddleName",
+        "Title": "Title",
+        "Organization": "Awardee",
+        "Funding Agency": "Agency",
+        "Funding Amount": "Amount"
+    }
+}

@@ -1,0 +1,9 @@
+Field Name	Is Primary Key	Syntax
+First Name	Yes	Text
+Last Name	Yes	Text
+Middle Name	No	Text
+Title	Yes	Text
+Organization	Yes	Text
+Fiscal Year	Yes	Integer
+Funding Agency	Yes	Text
+Funding Amount	No	LongInteger

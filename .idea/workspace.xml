@@ -1,49 +1,92 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="CabalLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="0fbc774a-af27-473a-be81-ff27e1550231" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/gui/components/graph.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/graphAnalyzer/GlobalGraphInfo.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/controllers/graphAnalyzer/GraphAnalyzer.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Affiliation(s)/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Author(s)/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Title/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Year/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/FieldExtractors/Affiliation(s)/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/FieldExtractors/Author(s)/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/FieldExtractors/Citations/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/FieldExtractors/Publisher/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/FieldExtractors/Title/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/FieldExtractors/Year/MyFieldExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyFormatter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyGetter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyGetter.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyTupleExtractor.java" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyTupleExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/DesktopApp.class" afterPath="$PROJECT_DIR$/out/production/ARISE/DesktopApp.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Publication/Scopus/MyFormatter.class" afterPath="$PROJECT_DIR$/bin/Publication/Scopus/MyFormatter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Publication/IEEE Xplore/MyGetter.class" afterPath="$PROJECT_DIR$/bin/Publication/IEEE Xplore/MyGetter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Publication/Scopus/MyGetter.class" afterPath="$PROJECT_DIR$/bin/Publication/Scopus/MyGetter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/bin/Publication/Scopus/MyTupleExtractor.class" afterPath="$PROJECT_DIR$/bin/Publication/Scopus/MyTupleExtractor.class" />
+    <list default="true" id="ec979203-2348-4e93-8dc2-2328ad3b1455" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Grant/FederalReporter/getJSON.jar" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Grant/schema.tsv" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Grant/FederalReporter/settings.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Grant/NSF/settings.json" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Grant/NSF/FieldExtractors/Affiliation/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Grant/NSF/FieldExtractors/Agency/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Grant/NSF/FieldExtractors/Amount/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Grant/NSF/FieldExtractors/Investigator/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Grant/NSF/FieldExtractors/Title/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Grant/NSF/FieldExtractors/Year/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Grant/NSF/MyFormatter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Grant/NSF/MyGetter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Grant/NSF/MyTupleExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Google Scholar/FieldExtractors/Citations/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Google Scholar/FieldExtractors/Title/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Google Scholar/FieldExtractors/Year/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Google Scholar/MyFormatter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Google Scholar/MyGetter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Google Scholar/MyTupleExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/IEEE Xplore/FieldExtractors/Affiliation(s)/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/IEEE Xplore/FieldExtractors/Author(s)/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/IEEE Xplore/FieldExtractors/Publisher/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/IEEE Xplore/FieldExtractors/Title/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/IEEE Xplore/FieldExtractors/Year/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/IEEE Xplore/MyFormatter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/IEEE Xplore/MyGetter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/IEEE Xplore/MyTupleExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Microsoft Academics/FieldExtractors/Affiliation(s)/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Microsoft Academics/FieldExtractors/Author(s)/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Microsoft Academics/FieldExtractors/Title/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Microsoft Academics/FieldExtractors/Year/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Microsoft Academics/MyFormatter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Microsoft Academics/MyGetter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Microsoft Academics/MyTupleExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Science Direct/FieldExtractors/Affiliation(s)/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Science Direct/FieldExtractors/Author(s)/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Science Direct/FieldExtractors/Citations/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Science Direct/FieldExtractors/Publisher/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Science Direct/FieldExtractors/Title/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Science Direct/FieldExtractors/Year/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Science Direct/MyFormatter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Science Direct/MyGetter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Science Direct/MyTupleExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Scopus/FieldExtractors/Affiliation(s)/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Scopus/FieldExtractors/Author(s)/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Scopus/FieldExtractors/Citations/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Scopus/FieldExtractors/Publisher/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Scopus/FieldExtractors/Title/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Scopus/FieldExtractors/Year/MyFieldExtractor.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Scopus/MyFormatter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Scopus/MyGetter.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bin/Publication/Scopus/MyTupleExtractor.class" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/util/Constants.class" afterPath="$PROJECT_DIR$/out/production/ARISE/util/Constants.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/wrapper/sourceWrapper/DirectSourceWrapper.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/wrapper/sourceWrapper/DirectSourceWrapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/schema/Field.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/schema/Field.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/wrapper/aspectWrapper/GeneralAspectWrapper.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/wrapper/aspectWrapper/GeneralAspectWrapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/wrapper/sourceWrapper/GeneralSourceWrapper.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/wrapper/sourceWrapper/GeneralSourceWrapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/wrapper/GeneralWrapper.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/wrapper/GeneralWrapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/groupings/Grouper.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/groupings/Grouper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/HTTPHandler$1.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/HTTPHandler$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/intraAspectMatchers/InclusionCounter.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/intraAspectMatchers/InclusionCounter.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/wrapper/sourceWrapper/IndirectSourceWrapper.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/wrapper/sourceWrapper/IndirectSourceWrapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/schema/specificFields/IntegerField.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/schema/specificFields/IntegerField.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/wrapper/aspectWrapper/indirectWrappers/LocalAspectWrapper.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/wrapper/aspectWrapper/indirectWrappers/LocalAspectWrapper.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/schema/specificFields/LongIntegerField.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/schema/specificFields/LongIntegerField.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/wrapper/aspectWrapper/indirectWrappers/RemoteAspectWrapper.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/wrapper/aspectWrapper/indirectWrappers/RemoteAspectWrapper.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/gui/components/ResultCard$1.class" afterPath="$PROJECT_DIR$/out/production/ARISE/gui/components/ResultCard$1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/gui/components/ResultCard.class" afterPath="$PROJECT_DIR$/out/production/ARISE/gui/components/ResultCard.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$1.class" afterPath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$2.class" afterPath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$3.class" afterPath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$4.class" afterPath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel$4.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel.class" afterPath="$PROJECT_DIR$/out/production/ARISE/gui/components/SearchPanel.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/DesktopApp.java" afterPath="$PROJECT_DIR$/src/DesktopApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyFormatter.java" afterPath="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyFormatter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyGetter.java" afterPath="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyGetter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyTupleExtractor.java" afterPath="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyTupleExtractor.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/components/ResultCard.java" afterPath="$PROJECT_DIR$/src/gui/components/ResultCard.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gui/components/SearchPanel.java" afterPath="$PROJECT_DIR$/src/gui/components/SearchPanel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/schema/SchemaObj.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/schema/SchemaObj.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/SearchHandler.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/SearchHandler.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/ARISE/controllers/schema/specificFields/TextField.class" afterPath="$PROJECT_DIR$/out/production/ARISE/controllers/schema/specificFields/TextField.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ARISE.iml" afterPath="$PROJECT_DIR$/ARISE.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/compiler.xml" afterPath="$PROJECT_DIR$/.idea/compiler.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ARISE.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path=".idea/dataSources.local.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,48 +104,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="MyTupleExtractor.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyTupleExtractor.java">
+      <file leaf-file-name="HTTPHandler.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controllers/HTTPHandler.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyGetter.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyGetter.java">
+      <file leaf-file-name="DesktopApp.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DesktopApp.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="169" column="48" selection-start-line="169" selection-start-column="48" selection-end-line="169" selection-end-column="48" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3370#3379#0" expanded="true" />
-                <element signature="e#4699#4708#0" expanded="true" />
-              </folding>
+              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyGetter.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/MyGetter.java">
+      <file leaf-file-name="GlobalGraphInfo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controllers/graphAnalyzer/GlobalGraphInfo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.46089387">
-              <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+            <state vertical-scroll-proportion="0.51039696">
+              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -115,50 +147,20 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Affiliation(s)/MyFieldExtractor.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Author(s)/MyFieldExtractor.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Publisher/MyFieldExtractor.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Title/MyFieldExtractor.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Citations/MyFieldExtractor.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Year/MyFieldExtractor.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/IEEE Xplore/units/MyTupleExtractor.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/IEEE Xplore/units/MyGetter.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyFormatter.java" />
-        <option value="$PROJECT_DIR$/src/util/MyHTTP.java" />
-        <option value="$PROJECT_DIR$/src/DesktopApp.java" />
-        <option value="$PROJECT_DIR$/src/controllers/graphAnalyzer/globalGraphInfo.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyTupleExtractor.java" />
-        <option value="$PROJECT_DIR$/src/gui/components/SearchPanel.java" />
-        <option value="$PROJECT_DIR$/src/controllers/graphAnalyzer/GlobalGraphInfo.java" />
-        <option value="$PROJECT_DIR$/src/controllers/graphAnalyzer/GraphAnalyzer.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyTupleExtractor.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Affiliation(s)/MyFieldExtractor.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Author(s)/MyFieldExtractor.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Title/MyFieldExtractor.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Year/MyFieldExtractor.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyGetter.java" />
-        <option value="$PROJECT_DIR$/src/gui/components/ResultCard.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyTupleExtractor.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyGetter.java" />
-        <option value="$PROJECT_DIR$/aspects/Publication/Scopus/units/MyGetter.java" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="Bundled (Maven 3)" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
   </component>
   <component name="NamedScopeManager">
     <order />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1697" />
-    <option name="y" value="87" />
     <option name="width" value="1440" />
-    <option name="height" value="813" />
+    <option name="height" value="900" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -183,6 +185,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -230,118 +233,40 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARISE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARISE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aspects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Publication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARISE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARISE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aspects" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Publication" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Scopus" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="units" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARISE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ARISE" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="aspects" />
+              <option name="myItemId" value="lib" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/lib/xom-1.2.10.jar!/" />
+    <property name="options.lastSelected" value="settings.xslt" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
     <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Java Libraries/junit-4.12.jar!/" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="FullScreen" value="true" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
-  </component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/aspects/Publication/Microsoft Academics" />
-      <recent name="$PROJECT_DIR$/src/gui/components/adders" />
-      <recent name="$PROJECT_DIR$/aspects/Publication" />
-      <recent name="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Citations" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/gui/components" />
-      <recent name="$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors" />
-    </key>
   </component>
   <component name="RunManager" selected="Application.DesktopApp">
     <configuration default="false" name="DesktopApp" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="DesktopApp" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="ARISE" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="GraphAnalyzer" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="controllers.graphAnalyzer.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="controllers.graphAnalyzer.GraphAnalyzer" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -423,6 +348,102 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="CabalRunConfiguration" factoryName="Haskell">
+      <module name="" />
+      <setting name="executableName" value="" />
+      <setting name="parameters" value="" />
+      <setting name="workingDir" value="" />
+      <environmetVariables />
+      <method />
+    </configuration>
+    <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="myFilePath" />
+      <option name="GLUE" />
+      <option name="myNameFilter" />
+      <option name="myGeneratedName" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ARISE" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="TARGET" value="" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlashRunConfigurationType" factoryName="Flash App">
+      <option name="BCName" value="" />
+      <option name="IOSSimulatorSdkPath" value="" />
+      <option name="adlOptions" value="" />
+      <option name="airProgramParameters" value="" />
+      <option name="appDescriptorForEmulator" value="Android" />
+      <option name="debugTransport" value="USB" />
+      <option name="debuggerSdkRaw" value="BC SDK" />
+      <option name="emulator" value="NexusOne" />
+      <option name="emulatorAdlOptions" value="" />
+      <option name="fastPackaging" value="true" />
+      <option name="fullScreenHeight" value="0" />
+      <option name="fullScreenWidth" value="0" />
+      <option name="launchUrl" value="false" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="mobileRunTarget" value="Emulator" />
+      <option name="moduleName" value="" />
+      <option name="overriddenMainClass" value="" />
+      <option name="overriddenOutputFileName" value="" />
+      <option name="overrideMainClass" value="false" />
+      <option name="runTrusted" value="true" />
+      <option name="screenDpi" value="0" />
+      <option name="screenHeight" value="0" />
+      <option name="screenWidth" value="0" />
+      <option name="url" value="http://" />
+      <option name="usbDebugPort" value="7936" />
+      <method />
+    </configuration>
+    <configuration default="true" type="FlexUnitRunConfigurationType" factoryName="FlexUnit" appDescriptorForEmulator="Android" class_name="" emulatorAdlOptions="" method_name="" package_name="" scope="Class">
+      <option name="BCName" value="" />
+      <option name="launcherParameters">
+        <LauncherParameters>
+          <option name="browser" value="a7bb68e0-33c0-4d6f-a81a-aac1fdb870c8" />
+          <option name="launcherType" value="OSDefault" />
+          <option name="newPlayerInstance" value="false" />
+          <option name="playerPath" value="/Applications/Flash Player Debugger.app" />
+        </LauncherParameters>
+      </option>
+      <option name="moduleName" value="" />
+      <option name="trusted" value="true" />
+      <method />
+    </configuration>
     <configuration default="true" type="GradleRunConfiguration" factoryName="Gradle">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -439,6 +460,16 @@
       </ExternalSystemSettings>
       <method />
     </configuration>
+    <configuration default="true" type="GrailsRunConfigurationType" factoryName="Grails">
+      <module name="" />
+      <setting name="vmparams" value="" />
+      <setting name="cmdLine" value="run-app" />
+      <setting name="depsClasspath" value="false" />
+      <setting name="passParentEnv" value="true" />
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <setting name="launchBrowser" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="JUnit" factoryName="JUnit">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
@@ -450,11 +481,11 @@
       <option name="TEST_OBJECT" value="class" />
       <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
+        <value defaultName="moduleWithDependencies" />
       </option>
       <envs />
       <patterns />
@@ -465,12 +496,99 @@
       <envs />
       <method />
     </configuration>
+    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
+      <method />
+    </configuration>
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ARISE" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ARISE" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
+      <method />
+    </configuration>
+    <configuration default="true" type="PythonConfigurationType" factoryName="Python">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ARISE" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <method />
+    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
       <option name="SHMEM_ADDRESS" value="javadebug" />
       <option name="HOST" value="localhost" />
       <option name="PORT" value="5005" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <envs />
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -492,7 +610,7 @@
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
+        <value defaultName="moduleWithDependencies" />
       </option>
       <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
@@ -501,63 +619,210 @@
       <listeners />
       <method />
     </configuration>
-    <list size="2">
+    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Run Launcher">
+      <method />
+    </configuration>
+    <configuration default="true" type="osgi.bnd.run" factoryName="Test Launcher (JUnit)">
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Attests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ARISE" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Doctests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ARISE" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Nosetests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ARISE" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="Unittests">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ARISE" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="PUREUNITTEST" value="true" />
+      <option name="PARAMS" value="" />
+      <option name="USE_PARAM" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="tests" factoryName="py.test">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="ARISE" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="FOLDER_NAME" value="" />
+      <option name="TEST_TYPE" value="TEST_SCRIPT" />
+      <option name="PATTERN" value="" />
+      <option name="USE_PATTERN" value="false" />
+      <option name="testToRun" value="" />
+      <option name="keywords" value="" />
+      <option name="params" value="" />
+      <option name="USE_PARAM" value="false" />
+      <option name="USE_KEYWORD" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <extension name="scalaCoverage" />
+      <module name="" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
+      <envs />
+      <method />
+    </configuration>
+    <list size="1">
       <item index="0" class="java.lang.String" itemvalue="Application.DesktopApp" />
-      <item index="1" class="java.lang.String" itemvalue="Application.GraphAnalyzer" />
     </list>
     <recent_temporary>
-      <list size="2">
+      <list size="1">
         <item index="0" class="java.lang.String" itemvalue="Application.DesktopApp" />
-        <item index="1" class="java.lang.String" itemvalue="Application.GraphAnalyzer" />
       </list>
     </recent_temporary>
+    <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
+      <Host>localhost</Host>
+      <Port>5050</Port>
+    </configuration>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="0fbc774a-af27-473a-be81-ff27e1550231" name="Default" comment="" />
-      <created>1445197689188</created>
+      <changelist id="ec979203-2348-4e93-8dc2-2328ad3b1455" name="Default" comment="" />
+      <created>1446503770381</created>
       <option name="number" value="Default" />
-      <updated>1445197689188</updated>
+      <updated>1446503770381</updated>
+      <workItem from="1446503771630" duration="439000" />
     </task>
     <servers />
   </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="439000" />
+  </component>
   <component name="ToolWindowManager">
-    <frame x="1697" y="87" width="1440" height="813" extended-state="6" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="false" />
     <layout>
-      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33012047" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32891566" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="GhcMod" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Cabal" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20625" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32974428" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3655914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <option name="time" value="4" />
-    </breakpoint-manager>
+    <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -565,367 +830,34 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyGetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/MyFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/MyGetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/requiredLibraries.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/wrapperTests/SchemaReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/IEEE Xplore/units/FieldExtractors/Affiliation(s)/MyFieldExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.28601694">
-          <caret line="9" column="44" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/schema.tsv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19067797">
-          <caret line="6" column="27" selection-start-line="6" selection-start-column="27" selection-end-line="6" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/tests/wrapperTests/SchemaReaderTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.041899443">
-          <caret line="2" column="22" selection-start-line="2" selection-start-column="22" selection-end-line="2" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/lib/requiredLibraries.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.10474861">
-          <caret line="5" column="35" selection-start-line="5" selection-start-column="35" selection-end-line="5" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Affiliation(s)/MyFieldExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Author(s)/MyFieldExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="1" column="24" selection-start-line="1" selection-start-column="24" selection-end-line="1" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Publisher/MyFieldExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Google Scholar/units/FieldExtractors/Citations/MyFieldExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Title/MyFieldExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Citations/MyFieldExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2866242">
-          <caret line="12" column="1" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/FieldExtractors/Year/MyFieldExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.477707">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/IEEE Xplore/units/MyFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="3" column="16" selection-start-line="3" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/IEEE Xplore/units/MyGetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4401806">
-          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/MyFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5756208">
-          <caret line="17" column="5" selection-start-line="17" selection-start-column="5" selection-end-line="17" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/schema/SchemaReader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.37246048">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/components/graph.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/LocalSearchServer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8888888">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/SearchHandler.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.111111">
-          <caret line="70" column="34" selection-start-line="70" selection-start-column="30" selection-end-line="70" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/wrapper/GeneralWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/groupings/Grouper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/wrapper/sourceWrapper/GeneralSourceWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="22" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/wrapper/aspectWrapper/indirectWrappers/RemoteAspectWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="46" selection-start-line="0" selection-start-column="44" selection-end-line="0" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/wrapper/sourceWrapper/interfaces/Getter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23702031">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/HTTPHandler.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="161" column="59" selection-start-line="161" selection-start-column="58" selection-end-line="161" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/wrapper/sourceWrapper/interfaces/TupleExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27088037">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/IEEE Xplore/units/MyTupleExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.101580136">
-          <caret line="3" column="20" selection-start-line="3" selection-start-column="20" selection-end-line="3" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/MyTupleExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42437923">
-          <caret line="23" column="92" selection-start-line="23" selection-start-column="92" selection-end-line="23" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/util/MyHTTP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16930023">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/wrapper/sourceWrapper/DirectSourceWrapper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.17307693">
-          <caret line="71" column="41" selection-start-line="71" selection-start-column="39" selection-end-line="71" selection-end-column="41" />
+          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/DesktopApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16930023">
-          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controllers/graphAnalyzer/GraphAnalyzer.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="71" column="21" selection-start-line="71" selection-start-column="21" selection-end-line="71" selection-end-column="21" />
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/components/SearchPanel.java">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33860046">
-          <caret line="80" column="30" selection-start-line="80" selection-start-column="30" selection-end-line="80" selection-end-column="30" />
+        <state vertical-scroll-proportion="0.22670025">
+          <caret line="6" column="7" selection-start-line="6" selection-start-column="7" selection-end-line="6" selection-end-column="7" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controllers/graphAnalyzer/GlobalGraphInfo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.06772009">
-          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyFormatter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Affiliation(s)/MyFieldExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/MainFrame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="179" column="65" selection-start-line="179" selection-start-column="47" selection-end-line="179" selection-end-column="65" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/components/ResultPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/gui/components/ResultCard.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8645598">
-          <caret line="62" column="54" selection-start-line="62" selection-start-column="54" selection-end-line="62" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyTupleExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3047404">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Author(s)/MyFieldExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.27088037">
-          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Title/MyFieldExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.16930023">
-          <caret line="8" column="55" selection-start-line="8" selection-start-column="55" selection-end-line="8" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/FieldExtractors/Year/MyFieldExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3047404">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyGetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.52374303">
-          <caret line="34" column="35" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Science Direct/units/MyTupleExtractor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="19" column="0" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Microsoft Academics/units/MyGetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="169" column="48" selection-start-line="169" selection-start-column="48" selection-end-line="169" selection-end-column="48" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3370#3379#0" expanded="true" />
-            <element signature="e#4699#4708#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/aspects/Publication/Scopus/units/MyGetter.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46089387">
-          <caret line="31" column="6" selection-start-line="31" selection-start-column="6" selection-end-line="31" selection-end-column="6" />
+        <state vertical-scroll-proportion="0.51039696">
+          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -947,7 +879,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>No facets are configured</last-edited>
+          <last-edited>Python</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -959,6 +891,7 @@
       </state>
       <state key="GlobalLibrariesConfigurable.UI">
         <settings>
+          <last-edited>scala-sdk-2.11.7</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -970,7 +903,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>JDK 1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -994,7 +927,7 @@
       </state>
       <state key="ProjectJDKs.UI">
         <settings>
-          <last-edited>1.8</last-edited>
+          <last-edited>JDK 1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1006,6 +939,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
+          <last-edited>commons-beanutils-1.8.0</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
