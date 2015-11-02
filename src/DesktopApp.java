@@ -1,3 +1,4 @@
+import controllers.graphAnalyzer.GraphAnalyzer;
 import gui.MainFrame;
 
 public class DesktopApp {

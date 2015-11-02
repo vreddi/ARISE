@@ -1,5 +1,6 @@
 package gui.components;
 
+import controllers.graphAnalyzer.GlobalGraphInfo;
 import controllers.schema.Field;
 import controllers.schema.SchemaObj;
 import net.sf.json.JSONArray;
@@ -57,6 +58,21 @@ public class ResultCard extends JPanel{
                 txt += "Record provided by source(s): " + current.getString("Included by") + "</html>";
                 DefaultMutableTreeNode node = new DefaultMutableTreeNode(txt);
                 currentGroupNode.add(node);
+
+                // Graph Analyzing Info Extraction
+                // -------------------------------------------------------------
+                String key = current.getString("Included by");
+                if(GlobalGraphInfo.sourceToCount.containsKey(key) == true){
+                    int currentCount = GlobalGraphInfo.sourceToCount.get(key);
+                    GlobalGraphInfo.sourceToCount.put(key, currentCount + 1);
+                }
+                else{
+                    if(!key.contains(",")){
+                        GlobalGraphInfo.sourceToCount.put(key, 0);
+                        GlobalGraphInfo.keys.add(key);
+                    }
+                }
+                // --------------------------------------------------------------
             }
         }
 
