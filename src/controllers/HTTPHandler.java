@@ -89,6 +89,9 @@ public class HTTPHandler implements HttpHandler {
             sendError400(httpExchange);
             return;
         }
+        if (searchConditions.containsKey("kws")) {
+            searchConditions.replace("kws", JSONObject.fromObject(searchConditions.get("kws")));
+        }
 
         //  Parse context and determine target source
         String path = httpExchange.getRequestURI().getPath();

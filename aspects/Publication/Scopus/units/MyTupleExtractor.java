@@ -19,7 +19,6 @@ public class MyTupleExtractor implements TupleExtractor{
     @Override
     public JSONArray getTuples(JSON all) {
         JSONObject allAsObject = JSONObject.fromObject(all);
-
         try {
             JSONObject innerJSON = JSONObject.fromObject(allAsObject.get("search-results"));
             return innerJSON.getJSONArray("entry");

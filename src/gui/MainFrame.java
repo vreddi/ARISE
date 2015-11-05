@@ -105,6 +105,34 @@ public class MainFrame extends JFrame{
         initializeMenuBar();
     }
 
+    public void restartSearch(String name, String affiliation) {
+        if (name.equals("Name, i.e. Jiawei Han")) {
+            return;
+        }
+        JSONObject searchConditions = new JSONObject();
+        String[] nameTokens = getNameTokens(name);
+        searchConditions.put("first", nameTokens[0]);
+        searchConditions.put("last", nameTokens[1]);
+        if (nameTokens[2].length() != 0) {
+            searchConditions.put("middle", nameTokens[2]);
+        }
+        searchConditions.put("fullName", name);
+        if(!affiliation.equals("Affiliation, i.e. UIUC")) {
+            searchConditions.put("affiliation", affiliation);
+        }
+        String[][] kws = rpanel.getNewKeywords();
+        JSONObject kwObj = new JSONObject();
+        kwObj.put("positive", JSONArray.fromObject(kws[0]));
+        kwObj.put("negative", JSONArray.fromObject(kws[1]));
+        searchConditions.put("kws", kwObj);
+        JSONObject results = searchHandler.restartSearch(searchConditions);
+        this.remove(this.rpanel);
+        initializeResultPanel();
+        this.rpanel.display(results);
+        this.validate();
+        this.repaint();
+    }
+
     private void initializeMenuBar() {
         JMenuBar menubar  = new JMenuBar();
         JMenu registration = new JMenu("Registration");

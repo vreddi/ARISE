@@ -17,6 +17,7 @@ public class SearchPanel extends JPanel {
 
     private JTextField nameInput;
     private JTextField affiliationInput;
+    private JButton restartSearchButton;
     private JButton searchButton;
     private JButton analyzeButton;          // Button used to show the Graph Analyze Window
     private MainFrame parentWindow;
@@ -70,12 +71,28 @@ public class SearchPanel extends JPanel {
         });
         affiliationInput.setPreferredSize(new Dimension((this.getWidth() / 2) - 5, this.getHeight() - 40));
         add(this.affiliationInput);
+        //  Ste up and add restart search button
+        restartSearchButton = new JButton("Redo search");
+        restartSearchButton.setEnabled(false);
+        restartSearchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Clear Graph Analyzer Data
+                GlobalGraphInfo.sourceToCount.clear();
+                GlobalGraphInfo.keys.clear();
+                restartSearch();
+            }
+        });
+        restartSearchButton.setSize(120, 30);
+        add(restartSearchButton);
         //  Set up and add search button
         searchButton = new JButton("Get Profile");
         searchButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 // Clear Graph Analyzer Data
+                restartSearchButton.setEnabled(true);
+                analyzeButton.setEnabled(true);
                 GlobalGraphInfo.sourceToCount.clear();
                 GlobalGraphInfo.keys.clear();
                 startSearch();
@@ -86,11 +103,13 @@ public class SearchPanel extends JPanel {
         analyzeButton = new JButton();
         try {
             Image img = ImageIO.read(getClass().getResource("graph.png"));
+
             BufferedImage scaledImg = new BufferedImage(15,15,BufferedImage.TYPE_INT_ARGB);
             scaledImg.createGraphics().drawImage(img, 0, 0, 15, 15, null);
             analyzeButton.setIcon(new ImageIcon(scaledImg));
         } catch (IOException ex) {
         }
+        analyzeButton.setEnabled(false);
         analyzeButton.setSize(15, 15);
         analyzeButton.setBackground(Color.white);
         analyzeButton.setAlignmentX(50);
@@ -121,6 +140,10 @@ public class SearchPanel extends JPanel {
 
     public void startSearch() {
         this.parentWindow.startSearch(this.getInputName(), this.getInputAffiliation());
+    }
+
+    public void restartSearch() {
+        this.parentWindow.restartSearch(this.getInputName(), this.getInputAffiliation());
     }
 
     public void promptAndFocus() {

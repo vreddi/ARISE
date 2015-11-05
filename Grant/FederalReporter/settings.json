@@ -1,4 +1,0 @@
-{
-    "type" : "exec",
-    "commandTemplate" : "java -jar getJSON.jar -first [[first]] -last [[last]]"
-}

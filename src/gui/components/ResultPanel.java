@@ -5,6 +5,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.*;
 
 public class ResultPanel extends JPanel{
 
@@ -12,9 +13,11 @@ public class ResultPanel extends JPanel{
     private JPanel infoArea;
     private JPanel switchArea;
     private ButtonGroup switchButtons;
+    private Set<ResultCard> cards;
 
     public ResultPanel() {
         super();
+        this.cards = new HashSet<ResultCard>();
         this.setSize(800, 610);
         this.setPreferredSize(new Dimension(800, 610));
         this.infoArea = new JPanel();
@@ -40,7 +43,9 @@ public class ResultPanel extends JPanel{
         this.switchButtons = new ButtonGroup();
         for (Object k : results.keySet()) {
             String cardName = (String)k;
-            this.infoArea.add(new ResultCard(results.getJSONObject(cardName)), cardName);
+            ResultCard card = new ResultCard(results.getJSONObject(cardName));
+            this.cards.add(card);
+            this.infoArea.add(card, cardName);
             final JRadioButton button = new JRadioButton(cardName);
             button.setVisible(true);
             button.setSize(100, 30);
@@ -55,6 +60,65 @@ public class ResultPanel extends JPanel{
             this.switchArea.add(button);
         }
         layout.first(this.infoArea);
+    }
+
+    public String[][] getNewKeywords() {
+        Map<String, Double> total = new HashMap<String, Double>();
+        for (ResultCard card : cards) {
+            Map<String, Double> cur = card.getRelevanceVector();
+            for (Map.Entry<String, Double> entry : cur.entrySet()) {
+                if (total.containsKey(entry.getKey())) {
+                    total.replace(entry.getKey(), entry.getValue() + total.get(entry.getKey()));
+                } else {
+                    total.put(entry.getKey(), entry.getValue());
+                }
+            }
+        }
+        Comparator<Map.Entry<String, Double>> cmp = new Comparator<Map.Entry<String, Double>>() {
+            @Override
+            public int compare(Map.Entry<String, Double> e1, Map.Entry<String, Double> e2) {
+                return (int)(e1.getValue() - e2.getValue());
+            }
+        };
+        Set<Map.Entry<String, Double>> entries = total.entrySet();
+        String[][] ret = new String[2][5];
+        for (int i = 0; i < 5; i++) {
+            try {
+                Map.Entry<String, Double> max = Collections.max(entries, cmp);
+                if (max.getValue() <= 0) {
+                    for (int j = i; j < 5; j++) {
+                        ret[0][j] = null;
+                    }
+                    break;
+                }
+                ret[0][i] = max.getKey();
+                entries.remove(max);
+            } catch (NoSuchElementException e) {
+                for (int j = i; j < 5; j++) {
+                    ret[0][j] = null;
+                }
+                break;
+            }
+        }
+        for (int i = 0; i < 5; i++) {
+            try {
+                Map.Entry<String, Double> min = Collections.min(entries, cmp);
+                if (min.getValue() >= 0) {
+                    for (int j = i; j < 5; j++) {
+                        ret[1][j] = null;
+                    }
+                    break;
+                }
+                ret[1][i] = min.getKey();
+                entries.remove(min);
+            } catch (NoSuchElementException e) {
+                for (int j = i; j < 5; j++) {
+                    ret[1][j] = null;
+                }
+                break;
+            }
+        }
+        return ret;
     }
 
     private void switchCard(String name) {

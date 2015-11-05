@@ -42,7 +42,8 @@ public class DirectSourceWrapper extends GeneralSourceWrapper {
         File dest = new File(unitsFolder);
         if (!dest.exists()) dest.mkdirs();
         dest = new File(destinationPath);
-        if (!dest.exists()) dest.mkdirs();
+        if (dest.exists()) dest.delete();
+        dest.mkdirs();
         int errorCode = Main.compile(new String[] {
                 "-d", destinationPath,
                 unitsFolder + "MyGetter.java"

@@ -1,6 +1,7 @@
 import controllers.wrapper.sourceWrapper.interfaces.TupleExtractor;
 import net.sf.json.JSON;
 import net.sf.json.JSONArray;
+import net.sf.json.JSONException;
 import net.sf.json.JSONObject;
 
 import java.lang.Exception;
@@ -10,7 +11,12 @@ public class MyTupleExtractor implements TupleExtractor{
 
     @Override
     public JSONArray getTuples(JSON all) {
-        JSONObject allAsObject = JSONObject.fromObject(all);
+        JSONObject allAsObject;
+        try {
+            allAsObject = JSONObject.fromObject(all);
+        } catch (JSONException e) {
+            return new JSONArray();
+        }
         try {
             return allAsObject.getJSONArray("document");
         } catch (Exception e) {

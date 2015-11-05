@@ -23,6 +23,7 @@ public class SearchHandler{
     private Map<String, Boolean> activation;
     private boolean isValid;
     private LocalSearchServer server;
+    private JSONObject lastQuery;
 
     /*
     * Constructor of a search handler:
@@ -40,6 +41,7 @@ public class SearchHandler{
     * Default activation state of all sources is ACTIVATED.
     * */
     public void reset() {
+        this.lastQuery = null;
         File aspDir = new File(GeneralWrapper.basePath);
         this.registeredAspects = new HashSet<GeneralAspectWrapper>();
         this.activation = new HashMap<String, Boolean>();
@@ -85,7 +87,41 @@ public class SearchHandler{
                 results.put(registeredAspect.name, temp);
             }
         }
+        this.lastQuery = searchConditions;
         return results;
+    }
+
+    public JSONObject restartSearch(JSONObject searchConditions) {
+        JSONArray positiveKWs, negativeKWs;
+        if (lastQuery.containsKey("kws")) {
+            JSONObject kwObj = lastQuery.getJSONObject("kws");
+            if (kwObj.containsKey("positive")) positiveKWs = kwObj.getJSONArray("positive");
+            else positiveKWs = new JSONArray();
+            if (kwObj.containsKey("negative")) negativeKWs = kwObj.getJSONArray("negative");
+            else negativeKWs = new JSONArray();
+        } else {
+            positiveKWs = new JSONArray();
+            negativeKWs = new JSONArray();
+        }
+        JSONArray newPositive = searchConditions.getJSONObject("kws").getJSONArray("positive");
+        JSONArray newNegative = searchConditions.getJSONObject("kws").getJSONArray("negative");
+        for (int i = 0; i < newPositive.size(); i++) {
+            String kw = newPositive.getString(i);
+            if (kw == null) break;
+            if (negativeKWs.contains(kw)) negativeKWs.remove(kw);
+            else if (!positiveKWs.contains(kw)) positiveKWs.add(kw);
+        }
+        for (int i = 0; i < newNegative.size(); i++) {
+            String kw = newNegative.getString(i);
+            if (kw == null) break;
+            if (positiveKWs.contains(kw)) positiveKWs.remove(kw);
+            else if (!negativeKWs.contains(kw)) negativeKWs.add(kw);
+        }
+        JSONObject kwObj = new JSONObject();
+        kwObj.put("positive", positiveKWs);
+        kwObj.put("negative", negativeKWs);
+        searchConditions.replace("kws", kwObj);
+        return search(searchConditions);
     }
 
     /*
