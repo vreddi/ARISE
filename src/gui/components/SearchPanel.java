@@ -3,8 +3,6 @@ package gui.components;
 import controllers.graphAnalyzer.GlobalGraphInfo;
 import controllers.graphAnalyzer.GraphAnalyzer;
 import gui.MainFrame;
-import javafx.application.Application;
-import javafx.stage.Stage;
 
 import javax.imageio.ImageIO;
 import javax.swing.*;

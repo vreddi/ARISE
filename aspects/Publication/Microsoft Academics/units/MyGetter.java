@@ -188,4 +188,79 @@ public class MyGetter implements Getter {
         // Error Case
         return null;
     }
+
+    /**
+     *
+     * @param jourID
+     * @return Name of the Journal
+     */
+    public String getJournalName(int jourID){
+
+        // No journal exist for this record
+        if(jourID == 0){
+
+            return null;
+        }
+
+        Map<String, String> params = new HashMap<String, String>();
+
+        // Requesting for a JSON format response
+        params.put("$format", "json");
+        params.put("$filter", "ID" + " " + "eq" + " " + jourID + " ");
+
+        JSONObject jsonObj = JSONObject.fromObject(MyHTTP.get("https://api.datamarket.azure.com/MRC/MicrosoftAcademic/v2/Journal", params));
+
+        JSONObject innerJSON = jsonObj.getJSONObject("d");
+        JSONArray jsonArr = innerJSON.getJSONArray("results");
+
+        for(Object pObj : jsonArr){
+
+            JSONObject p = JSONObject.fromObject(pObj);
+
+            String jourName = (String)p.getString("FullName") + " " + (String)p.get("ShortName");
+
+            return jourName;
+        }
+
+        // Error Case
+        return null;
+    }
+
+
+    /**
+     *
+     * @param confID
+     * @return Name of the conference
+     */
+    public String getConferenceName(int confID){
+
+        // No conference exists for this record
+        if(confID == 0){
+            return null;
+        }
+
+        Map<String, String> params = new HashMap<String, String>();
+
+        // Requesting for a JSON format response
+        params.put("$format", "json");
+        params.put("$filter", "ID" + " " + "eq" + " " + confID + " ");
+
+        JSONObject jsonObj = JSONObject.fromObject(MyHTTP.get("https://api.datamarket.azure.com/MRC/MicrosoftAcademic/v2/Conference", params));
+
+        JSONObject innerJSON = jsonObj.getJSONObject("d");
+        JSONArray jsonArr = innerJSON.getJSONArray("results");
+
+        for(Object pObj : jsonArr){
+
+            JSONObject p = JSONObject.fromObject(pObj);
+
+            String confName = (String)p.getString("FullName") + " " + (String)p.get("ShortName");
+
+            System.out.println(confName);
+            return confName;
+        }
+
+        // Error Case
+        return null;
+    }
 }

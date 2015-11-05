@@ -1,5 +1,4 @@
 
-import controllers.graphAnalyzer.GlobalGraphInfo;
 import controllers.wrapper.sourceWrapper.interfaces.TupleExtractor;
 
 import net.sf.json.JSON;
@@ -8,11 +7,6 @@ import net.sf.json.JSONObject;
 
 import java.lang.Exception;
 import java.lang.Override;
-import java.lang.System;
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
-import static controllers.graphAnalyzer.GraphAnalyzer.*;
 
 public class MyTupleExtractor implements TupleExtractor{
 
